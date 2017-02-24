@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources(:countries)
+  get 'bucketlists' => 'bucketlists#index'
 
 end
