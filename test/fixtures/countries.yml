@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  region: MyString
+  season: MyString
+  visitLength: 1
+  mapURL: MyString
+  imageURL: MyString
+
+two:
+  name: MyString
+  region: MyString
+  season: MyString
+  visitLength: 1
+  mapURL: MyString
+  imageURL: MyString
