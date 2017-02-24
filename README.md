@@ -1,24 +1,27 @@
-# README
+# cc_project_bucket_list
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A web app that allows the user to store a wish list of places, experiences and events.
 
-Things you may want to cover:
+The user can select a category (eg country, experience, event), then enter details such as where, when, how long - depending on the category.
 
-* Ruby version
+As an extension the user can link listings in different categories so for e.g. if they plan a trip somewhere, they can tag the experiences or events they want to do in that place to the country listing.
 
-* System dependencies
+Once they have achieved the experience they can tick it off their list, but choose to store it in an archive and potentially add notes or photos to the listing as memories.
 
-* Configuration
+MVP:
+User can add countries to visit, experiences to have, and events to attend using a form, and store them to a database. They can then call up their listings, edit them, and tick them off when achieved.
 
-* Database creation
+Extensions:
+User authentication to allow different users to store different things
+Listings of different categories can be linked together
+User can archive listings once achieved and look them up again.
 
-* Database initialization
+Further extensions:
+User can add their own categories and customise the information they want to capture (this would be tricky with a SQL database)
+Adding images/notes as memories
+Linking to other applications e.g. calendar
 
-* How to run the test suite
+Technology
+Ruby/Rails with a SqlLite database, and a React front-end
+Jest or Enzyme for front-end testing
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
