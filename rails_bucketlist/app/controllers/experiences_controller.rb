@@ -2,6 +2,12 @@ class ExperiencesController < ApplicationController
 
   before_action :authenticate_user!
 
+  def getExperienceObject(id)
+    listExperience = BucketListExperience.find(id)
+    actualExperience = Experience.find(listExperience.experience_id)
+    return actualExperience
+  end
+
   def index
     experiences = current_user.bucket_list_experiences
     render  :json => experiences.as_json({
@@ -10,11 +16,8 @@ class ExperiencesController < ApplicationController
   end
 
   def show
-    experience = BucketListExperience.find(params[:id])
-    render({json: experience.as_json({
-      include: :experience
-      })
-    })
+    experience = getExperienceObject(params[:id])
+    render({json: experience})
   end
 
   def create
@@ -28,6 +31,25 @@ class ExperiencesController < ApplicationController
       })
     })
   end
+
+    def update
+      experience = getExperienceObject(params[:id])
+        if experience.update_attributes(experience_params())
+          render({json: experience})
+        else
+          render({json: :update_failed})
+        end
+    end
+
+#this might not be complete - need to delete BucketListExperience?
+    def destroy
+      experience = getExperienceObject(params[:id])
+        if experience.destroy!
+          render({json: {status: :success}})
+        else
+          render({json: {status: :delete_failed}})
+        end
+    end
 
   private
   def experience_params

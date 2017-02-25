@@ -2,6 +2,12 @@ class CountriesController < ApplicationController
 
   before_action :authenticate_user!
 
+  def getCountryObject(id)
+    listCountry = BucketListCountry.find(id)
+    actualCountry = Country.find(listCountry.country_id)
+    return actualCountry
+  end
+
   def index
     countries = current_user.bucket_list_countries
     render  :json => countries.as_json({
@@ -30,10 +36,7 @@ class CountriesController < ApplicationController
   def update
     country = getCountryObject(params[:id])
       if country.update_attributes(country_params())
-        render({json: country.as_json({
-          include: :country
-          })
-        })
+        render({json: country})
       else
         render({json: :update_failed})
       end
@@ -47,12 +50,6 @@ class CountriesController < ApplicationController
       else
         render({json: {status: :delete_failed}})
       end
-  end
-
-  def getCountryObject(id)
-    listCountry = BucketListCountry.find(id)
-    actualCountry = Country.find(listCountry.country_id)
-    return actualCountry
   end
 
   private
