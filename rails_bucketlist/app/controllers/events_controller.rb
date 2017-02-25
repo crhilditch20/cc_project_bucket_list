@@ -9,4 +9,30 @@ class EventsController < ApplicationController
         })
   end
 
+  def show
+    event = BucketListEvent.find(params[:id])
+    render({json: event.as_json({
+      include: :event
+      })
+    })
+  end
+
+  def create
+    newEvent = Event.create(event_params())
+    listEvent = BucketListEvent.create({
+      event: newEvent,
+      user: current_user
+      })
+    render({json: listEvent.as_json({
+      include: :event
+      })
+    })
+  end
+
+
+  private
+  def event_params
+    params.require(:event).permit([:title, :description, :venue, :mapURL, :date])
+  end
+
 end

@@ -19,6 +19,4 @@ class BucketlistsController < ApplicationController
     ]
   end
 
-
-
 end

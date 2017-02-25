@@ -4,6 +4,7 @@ Event.delete_all()
 BucketListCountry.delete_all()
 BucketListExperience.delete_all()
 BucketListEvent.delete_all()
+User.delete_all()
 
 country1 = Country.create({ 
   name: "Japan",
@@ -24,7 +25,7 @@ country2 = Country.create({
 
 experience1 = Experience.create({
   title: "Scuba diving",
-  description: "Um...scuba diving",
+  description: "Swimming with the fishes",
   season: "summer"
   })
 experience2 = Experience.create({
@@ -32,6 +33,12 @@ experience2 = Experience.create({
   description: "Watch a kodo drumming show",
   season: "any"
   })
+
+  event1 = Event.create({
+    title: "Rio Carnivale",
+    description: "World's biggest carnivale celebrations",
+    venue: "All over Rio"
+    })
 
 user1 = User.create({
   email: "claire@myemail.com",
@@ -46,5 +53,10 @@ listCountry1 = BucketListCountry.create({
 
 listExperience1 = BucketListExperience.create({
   experience: experience1,
+  user: user1
+  })
+
+listEvent1 = BucketListEvent.create({
+  event: event1,
   user: user1
   })
