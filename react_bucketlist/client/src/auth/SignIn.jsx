@@ -22,7 +22,7 @@ class SignIn extends React.Component {
   }
 
   signIn(event){
-    event.preventDefault(); //stops default behaviour eg on a form submit the page might refresh, so this would stop that happening and go through our own code first.
+    event.preventDefault();
     const request = new XMLHttpRequest();
     request.open('POST', this.props.url);
     request.setRequestHeader('Content-Type', 'application/json');
@@ -30,7 +30,7 @@ class SignIn extends React.Component {
     request.onload = () => {
       if (request.status === 201){
         const user = JSON.parse(request.responseText);
-        this.props.onSignIn(user); //this happens AFTER we send the data variable below which takes the current state of this component and sends it as a user object...
+        this.props.onSignIn(user); 
       }
     }
         const data = {

@@ -4,7 +4,7 @@ body{
 }
 
 h1, h2, h4 {
-  color: white;
+  color: DodgerBlue;
 }
 
 .container{  
@@ -21,10 +21,8 @@ h1, h2, h4 {
 .title{
   text-transform: uppercase;
   font-family: Impact, Charcoal, sans-serif;
-  color: crimson;
+  color: DodgerBlue;
   font-size: 60px;
-  -webkit-text-stroke: 2px black;
-  text-decoration: none;
 }
 
 .home{
@@ -86,7 +84,7 @@ button{
 }
 
 button:hover{
-  background-color: crimson;
+  background-color: DodgerBlue;
   cursor: pointer;
 }
 

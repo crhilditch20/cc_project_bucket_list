@@ -14,7 +14,7 @@ class LoginBox extends React.Component {
   }
 
   setUser(user){
-    this.setState({currentUser:user, favlist:[]})
+    this.setState({currentUser:user})
   }
 
   fetchUser(){
