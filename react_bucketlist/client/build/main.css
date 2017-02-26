@@ -1,10 +1,11 @@
 body{
+  background: AliceBlue;
   font-family: Verdana;
   margin: 0;
 }
 
 h1, h2, h4 {
-  color: DodgerBlue;
+  color: Black;
 }
 
 .container{  
@@ -15,13 +16,16 @@ h1, h2, h4 {
   justify-content: center;
   text-align: center;
   background-size: cover;
+}
 
+.bucketlist-homepage {
+  display: flex;
 }
 
 .title{
   text-transform: uppercase;
   font-family: Impact, Charcoal, sans-serif;
-  color: DodgerBlue;
+  color: Black;
   font-size: 60px;
 }
 
@@ -31,12 +35,12 @@ h1, h2, h4 {
   text-align: center;
 }
 
-.shows-link, button{
+.bucket-list-link, button{
   margin-top: 15px;
   padding: 10px 40px;
-  background-color: crimson;
-  color: #fafafa;
-  border-color: transparent;
+  border: 1px solid OrangeRed;
+  background-color: orange;
+  color: white;
   display: inline-block;
   text-decoration: none;
   border-radius: 5px;
@@ -77,22 +81,23 @@ nav{
 button{
   padding: 10px 50px;
   margin 20px 0;
+  border: 1px solid OrangeRed;
+  background-color: orange;
   color: white;
-  background-color: #333;
   font-size: 15px;
   border-radius: 5px;
 }
 
 button:hover{
-  background-color: DodgerBlue;
+  background-color: OrangeRed;
   cursor: pointer;
 }
 
-.show-image{
+/*.show-image{
   width: 90%;
-}
+}*/
 
-.shows-container{
+/*.shows-container{
   display: flex;
   justify-content: center; 
   flex-wrap: wrap;
@@ -113,9 +118,9 @@ button:hover{
 
 .show-title{
   margin: 0;
-}
+}*/
 
-.show-series{
+/*.show-series{
   font-size: 10px;
   margin: 0;
 }
@@ -124,4 +129,4 @@ button:hover{
   font-size: 12px;
   padding: 0 20px;
   text-align: center;
-}
+}*/

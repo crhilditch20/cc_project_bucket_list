@@ -51,6 +51,11 @@ listCountry1 = BucketListCountry.create({
   user: user1
   })
 
+listCountry2 = BucketListCountry.create({
+  country: country2,
+  user: user1
+  })
+
 listExperience1 = BucketListExperience.create({
   experience: experience1,
   user: user1
