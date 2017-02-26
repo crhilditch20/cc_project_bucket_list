@@ -15,7 +15,7 @@ class Countries extends React.Component {
     var countries = this.props.countries.map(function(country, index){
       return (
         <div className="bucketlistItem">
-        <img className="homepage-pic" src={country.country.image}></img>
+        <img className="homepage-pic" src={country.country.imageURL}></img>
           <button id="country" key={index} value={index}>{country.country.name}</button>
         </div>
         );
