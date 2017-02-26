@@ -13,7 +13,7 @@ class Experiences extends React.Component {
   render () {
     var experiences = this.props.experiences.map(function(experience, index){
       return (
-        <div className="bucketlistItem">
+        <div key={index} className="bucketlistItem">
         <img className="homepage-pic" src={experience.experience.imageURL}></img>
           <button className="goToItem" key={index} value={index}>{experience.experience.title}</button>
         </div>

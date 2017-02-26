@@ -27,7 +27,7 @@ class SignOut extends React.Component{
     return (
        <div>
         <button onClick={this.signOut}>Sign Out</button>
-        <Link className='bucket-list-link' to='/bucketlists'>View Bucket List</Link>
+        <Link className='link-button' to='/bucketlists'>View Bucket List</Link>
       </div>
     )
   }

@@ -12,7 +12,8 @@ class BucketList extends React.Component {
       bucketlistItems: [],
       bucketlistCountries: [],
       bucketlistExperiences: [],
-      bucketlistEvents: []
+      bucketlistEvents: [],
+      selectedItem: null
     }
   }
 
@@ -29,7 +30,6 @@ class BucketList extends React.Component {
        if(request.status === 200){
         data = JSON.parse(request.responseText)
         this.setState( { bucketlistItems: data } )
-        console.log(data[0])
         this.splitOutCategories();
        } else{
         console.log("Not logged in")
@@ -51,10 +51,31 @@ class BucketList extends React.Component {
       this.setState({bucketlistEvents: events})
     }
 
+    loadIndividualCountry (countryID) {
+      var url = 'http://localhost:5000/countries/' + countryID;
+      console.log(url);
+      var request = new XMLHttpRequest()
+      request.open('GET', url)
+
+      request.setRequestHeader('Content-Type', "application/json")
+      request.withCredentials = true
+
+      request.onload = () => {
+         if(request.status === 200){
+          var data = JSON.parse(request.responseText)
+          this.setState({selectedItem: data})
+          console.log(data)
+         } else{
+          console.log("object not found")
+         }
+      }
+      request.send(null)
+    }
+
 
   render () {
     return <div className="bucketlist-homepage">
-      <Countries countries={this.state.bucketlistCountries}/>
+      <Countries countries={this.state.bucketlistCountries} loadCountry={this.loadIndividualCountry.bind(this)}/>
         <Experiences experiences={this.state.bucketlistExperiences}/>
           <Events events={this.state.bucketlistEvents}/>
 

@@ -38,7 +38,7 @@ h1, h2, h4 {
   text-align: center;
 }
 
-.bucket-list-link, button{
+.link-button, button{
   margin-top: 10px;
   padding: 10px 40px;
   border: 1px solid OrangeRed;

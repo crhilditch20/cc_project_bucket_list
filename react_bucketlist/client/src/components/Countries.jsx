@@ -10,12 +10,18 @@ class Countries extends React.Component {
     }
   }
 
+  goToCountry (event) {
+    var countryID = event.target.value;
+    this.props.loadCountry(countryID);
+  }
+
   render () {
     var countries = this.props.countries.map(function(country, index){
       return (
-        <div className="bucketlistItem">
+        <div key={index} className="bucketlistItem">
         <img className="homepage-pic" src={country.country.imageURL}></img>
-          <button className="goToItem" key={index} value={index}>{country.country.name}</button>
+          <button className="goToItem" key={index} value={country.id} onClick={this.goToCountry.bind(this)}>{country.country.name}</button>
+
         </div>
         );
       }.bind(this));

@@ -13,7 +13,7 @@ class Events extends React.Component {
   render () {
     var events = this.props.events.map(function(event, index){
       return (
-        <div className="bucketlistItem">
+        <div key={index} className="bucketlistItem">
         <img className="homepage-pic" src={event.event.imageURL}></img>
           <button className="goToItem" key={index} value={index}>{event.event.title}</button>
         </div>
