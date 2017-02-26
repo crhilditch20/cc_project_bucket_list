@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router';
 
 class Countries extends React.Component {
 
@@ -19,7 +20,9 @@ class Countries extends React.Component {
         );
       }.bind(this));
       return (
-      <div id="countries">
+      <div id="countries"> 
+      <h4>Countries</h4>
+      <Link className="add-new" to='/countries'>Add new</Link>
        
           {countries}
     

@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router';
 
 class Events extends React.Component {
 
@@ -20,6 +21,8 @@ class Events extends React.Component {
       }.bind(this));
       return (
       <div id="events">
+      <h4>Events</h4>
+      <Link className="add-new" to='/events'>Add new</Link>
        
           {events}
     
