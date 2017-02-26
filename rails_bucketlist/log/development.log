@@ -4562,3 +4562,570 @@ Processing by EventsController#show as */*
 Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:34:36 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.2ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.2ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.2ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 32ms (Views: 2.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/experiences" for ::1 at 2017-02-26 16:35:09 +0000
+Processing by ExperiencesController#create as */*
+  Parameters: {"experience"=>{"title"=>"Surfing", "description"=>"Riding the waves", "season"=>"Summer", "imageURL"=>"http://www.surfertoday.com/images/stories/surfersunset.jpg"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "experiences" ("title", "description", "season", "created_at", "updated_at", "imageURL") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Surfing"], ["description", "Riding the waves"], ["season", "Summer"], ["created_at", 2017-02-26 16:35:09 UTC], ["updated_at", 2017-02-26 16:35:09 UTC], ["imageURL", "http://www.surfertoday.com/images/stories/surfersunset.jpg"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "bucket_list_experiences" ("experience_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["experience_id", 25], ["user_id", 9], ["created_at", 2017-02-26 16:35:09 UTC], ["updated_at", 2017-02-26 16:35:09 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 15ms (Views: 0.6ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:35:11 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 15ms (Views: 1.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/experiences/13" for ::1 at 2017-02-26 16:35:17 +0000
+Processing by ExperiencesController#show as */*
+  Parameters: {"id"=>"13", "experience"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.1ms)[0m  [1m[34mSELECT  "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:35:23 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.2ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 21ms (Views: 0.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:35:24 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.2ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 1.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/events/10" for ::1 at 2017-02-26 16:39:04 +0000
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"10", "event"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT  "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 7ms (Views: 1.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:39:41 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.2ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 1.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/experiences/12" for ::1 at 2017-02-26 16:39:43 +0000
+Processing by ExperiencesController#show as */*
+  Parameters: {"id"=>"12", "experience"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.1ms)[0m  [1m[34mSELECT  "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:39:51 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.4ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 1.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/experiences/12" for ::1 at 2017-02-26 16:40:01 +0000
+Processing by ExperiencesController#show as */*
+  Parameters: {"id"=>"12", "experience"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.1ms)[0m  [1m[34mSELECT  "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:40:30 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.7ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.3ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.6ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 33ms (Views: 2.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:40:49 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.5ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 1.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/experiences/12" for ::1 at 2017-02-26 16:40:51 +0000
+Processing by ExperiencesController#show as */*
+  Parameters: {"id"=>"12", "experience"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.2ms)[0m  [1m[34mSELECT  "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+Completed 200 OK in 7ms (Views: 1.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:42:11 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.2ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.2ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 33ms (Views: 2.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/experiences/12" for ::1 at 2017-02-26 16:42:14 +0000
+Processing by ExperiencesController#show as */*
+  Parameters: {"id"=>"12", "experience"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.2ms)[0m  [1m[34mSELECT  "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:42:51 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.2ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.5ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 3.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/experiences/12" for ::1 at 2017-02-26 16:42:52 +0000
+Processing by ExperiencesController#show as */*
+  Parameters: {"id"=>"12", "experience"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.3ms)[0m  [1m[34mSELECT  "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+Completed 200 OK in 15ms (Views: 1.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:43:08 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.6ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.6ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 1.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/experiences/13" for ::1 at 2017-02-26 16:43:11 +0000
+Processing by ExperiencesController#show as */*
+  Parameters: {"id"=>"13", "experience"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.1ms)[0m  [1m[34mSELECT  "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:49:47 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.2ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.2ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.5ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 61ms (Views: 4.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/experiences/12" for ::1 at 2017-02-26 16:49:49 +0000
+Processing by ExperiencesController#show as */*
+  Parameters: {"id"=>"12", "experience"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.1ms)[0m  [1m[34mSELECT  "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:50:02 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 13ms (Views: 1.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:50:17 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.3ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.7ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 1.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/experiences/12" for ::1 at 2017-02-26 16:50:21 +0000
+Processing by ExperiencesController#show as */*
+  Parameters: {"id"=>"12", "experience"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.1ms)[0m  [1m[34mSELECT  "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:50:29 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 15ms (Views: 0.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:50:31 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.5ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.5ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 24ms (Views: 1.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/countries/28" for ::1 at 2017-02-26 16:50:32 +0000
+Processing by CountriesController#show as */*
+  Parameters: {"id"=>"28", "country"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.1ms)[0m  [1m[34mSELECT  "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:51:49 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.2ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.2ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.3ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 1.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/countries/28" for ::1 at 2017-02-26 16:51:51 +0000
+Processing by CountriesController#show as */*
+  Parameters: {"id"=>"28", "country"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.2ms)[0m  [1m[34mSELECT  "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:51:54 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.5ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 36ms (Views: 1.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/experiences/12" for ::1 at 2017-02-26 16:51:56 +0000
+Processing by ExperiencesController#show as */*
+  Parameters: {"id"=>"12", "experience"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.1ms)[0m  [1m[34mSELECT  "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:51:59 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.2ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 3.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:52:08 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.2ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.6ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.3ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 51ms (Views: 2.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:52:47 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.2ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.3ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 1.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:53:33 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.3ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.4ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 1.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:53:43 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.3ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.5ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.5ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.6ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.6ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 2.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/experiences/12" for ::1 at 2017-02-26 16:53:49 +0000
+Processing by ExperiencesController#show as */*
+  Parameters: {"id"=>"12", "experience"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.2ms)[0m  [1m[34mSELECT  "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:53:58 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 16ms (Views: 1.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:53:58 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.2ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.3ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 1.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:54:08 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.2ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 1.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:54:23 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.4ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 1.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/experiences/12" for ::1 at 2017-02-26 16:54:53 +0000
+Processing by ExperiencesController#show as */*
+  Parameters: {"id"=>"12", "experience"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.2ms)[0m  [1m[34mSELECT  "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+Completed 200 OK in 14ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-26 16:56:48 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.4ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.3ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mExperience Load (1.8ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.3ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 2.1ms | ActiveRecord: 3.6ms)
+
+

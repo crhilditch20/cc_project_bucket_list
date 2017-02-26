@@ -126,7 +126,7 @@ class BucketList extends React.Component {
     if (this.state.selectedItem){
       mainDiv = 
       <div className="individual-item">
-        <IndividualItem />
+        <IndividualItem item={this.state.selectedItem}/>
       </div>
     }
 

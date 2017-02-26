@@ -113,6 +113,11 @@ button:hover{
   height: 120px;
 }
 
+#itempage-pic {
+  width: 400px;
+  height: 300px;
+}
+
 /*.show-image{
   width: 90%;
 }*/
