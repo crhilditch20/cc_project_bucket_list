@@ -93,6 +93,16 @@ button:hover{
   cursor: pointer;
 }
 
+.bucketlistItem {
+  width:200px;
+  height: 200px;
+}
+
+.homepage-pic {
+  width: 120px;
+  height: 120px;
+}
+
 /*.show-image{
   width: 90%;
 }*/

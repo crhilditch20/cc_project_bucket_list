@@ -1,12 +1,16 @@
 import React from 'react'
 import { Link, browserHistory } from 'react-router'
+import Countries from './Countries'
 
 class BucketList extends React.Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      bucketlistItems: []
+      bucketlistItems: [],
+      bucketlistCountries: [],
+      bucketlistExperiences: [],
+      bucketlistEvents: []
     }
   }
 
@@ -23,7 +27,8 @@ class BucketList extends React.Component {
        if(request.status === 200){
         data = JSON.parse(request.responseText)
         this.setState( { bucketlistItems: data } )
-        console.log(data[0][0].country.name)
+        console.log(data[0])
+        this.splitOutCategories();
        } else{
         console.log("Not logged in")
         browserHistory.goBack()
@@ -33,10 +38,21 @@ class BucketList extends React.Component {
 
   }
 
+    splitOutCategories () {
+      const countries = this.state.bucketlistItems[0];
+      this.setState({bucketlistCountries: countries})
+
+      const experiences = this.state.bucketlistItems[1];
+      this.setState({bucketlistExperiences: experiences})
+
+      const events = this.state.bucketlistItems[2];
+      this.setState({bucketlistEvents: events})
+    }
+
 
   render () {
     return <div className="bucketlist-homepage">
-      
+      <Countries countries={this.state.bucketlistCountries}/>
 
 
 
@@ -44,5 +60,6 @@ class BucketList extends React.Component {
   }
 
 }
+
 
 export default BucketList

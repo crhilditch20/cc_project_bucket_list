@@ -12,7 +12,7 @@ country1 = Country.create({
   season: "autumn",
   visitLength: 2,
   mapURL: "",
-  imageURL: ""
+  imageURL: "http://volcano.oregonstate.edu/sites/default/files/VWNews/2014-06-12-httpi.telegraph.co_.ukmultimediaarchive02551fuji_2551323b.jpg"
 })
 country2 = Country.create({ 
   name: "Cuba",
@@ -20,7 +20,7 @@ country2 = Country.create({
   season: "any",
   visitLength: 2,
   mapURL: "",
-  imageURL: ""
+  imageURL: "http://images.goaheadtours.com/banner/21292/downtown-havana-cuba-with-vintage-cars.jpg"
 })
 
 experience1 = Experience.create({
