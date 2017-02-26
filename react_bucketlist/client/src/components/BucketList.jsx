@@ -3,6 +3,7 @@ import { Link, browserHistory } from 'react-router'
 import Countries from './Countries'
 import Experiences from './Experiences'
 import Events from './Events'
+import IndividualItem from './IndividualItem'
 
 class BucketList extends React.Component {
 
@@ -72,17 +73,69 @@ class BucketList extends React.Component {
       request.send(null)
     }
 
+    loadIndividualExperience (experienceID) {
+      var url = 'http://localhost:5000/experiences/' + experienceID;
+      console.log(url);
+      var request = new XMLHttpRequest()
+      request.open('GET', url)
+
+      request.setRequestHeader('Content-Type', "application/json")
+      request.withCredentials = true
+
+      request.onload = () => {
+         if(request.status === 200){
+          var data = JSON.parse(request.responseText)
+          this.setState({selectedItem: data})
+          console.log(data)
+         } else{
+          console.log("object not found")
+         }
+      }
+      request.send(null)
+    }
+
+    loadIndividualEvent (eventID) {
+      var url = 'http://localhost:5000/events/' + eventID;
+      console.log(url);
+      var request = new XMLHttpRequest()
+      request.open('GET', url)
+
+      request.setRequestHeader('Content-Type', "application/json")
+      request.withCredentials = true
+
+      request.onload = () => {
+         if(request.status === 200){
+          var data = JSON.parse(request.responseText)
+          this.setState({selectedItem: data})
+          console.log(data)
+         } else{
+          console.log("object not found")
+         }
+      }
+      request.send(null)
+    }
 
   render () {
-    return <div className="bucketlist-homepage">
+    var mainDiv = 
+    <div className="bucketlist-homepage">
       <Countries countries={this.state.bucketlistCountries} loadCountry={this.loadIndividualCountry.bind(this)}/>
-        <Experiences experiences={this.state.bucketlistExperiences}/>
-          <Events events={this.state.bucketlistEvents}/>
-
+        <Experiences experiences={this.state.bucketlistExperiences} loadExperience={this.loadIndividualExperience.bind(this)}/>
+          <Events events={this.state.bucketlistEvents} loadEvent={this.loadIndividualEvent.bind(this)}/>
     </div>
-  }
 
+    if (this.state.selectedItem){
+      mainDiv = 
+      <div className="individual-item">
+        <IndividualItem />
+      </div>
+    }
+
+    return (
+      <div>
+      {mainDiv}
+      </div>
+      );
+    }
 }
-
 
 export default BucketList
