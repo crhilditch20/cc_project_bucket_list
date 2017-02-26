@@ -5,6 +5,7 @@ import Main from './components/Main'
 import BucketList from './components/BucketList'
 import AddCountry from './components/AddCountry'
 import AddExperience from './components/AddExperience'
+import AddEvent from './components/AddEvent'
 
 import {Router, Route, IndexRoute, hashHistory} from 'react-router'
 
@@ -18,6 +19,7 @@ class App extends React.Component{
           <Route path='/bucketlists' component={BucketList} />
           <Route path='/countries' component={AddCountry} />
           <Route path='/experiences' component={AddExperience} />
+          <Route path='/events' component={AddEvent} />
           
         </Route>
       </Router>
