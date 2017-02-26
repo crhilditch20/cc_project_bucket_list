@@ -20,6 +20,8 @@ h1, h2, h4 {
 
 .bucketlist-homepage {
   display: flex;
+  align-content: flex-start;
+  flex-flow: row wrap;
 }
 
 .title{
@@ -79,13 +81,14 @@ nav{
 }
 
 button{
-  padding: 10px 50px;
-  margin 20px 0;
+  margin: auto;
   border: 1px solid OrangeRed;
   background-color: orange;
   color: white;
-  font-size: 15px;
+  font-size: 10px;
   border-radius: 5px;
+  width: 120px;
+  height: 40px;
 }
 
 button:hover{

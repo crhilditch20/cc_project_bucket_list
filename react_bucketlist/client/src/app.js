@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import Home from './components/Home'
 import Main from './components/Main'
 import BucketList from './components/BucketList'
+import AddCountry from './components/AddCountry'
 
 import {Router, Route, IndexRoute, hashHistory} from 'react-router'
 
@@ -14,6 +15,8 @@ class App extends React.Component{
         <Route path='/' component={Main}>
           <IndexRoute component={Home} />
           <Route path='/bucketlists' component={BucketList} />
+          <Route path='/countries' component={AddCountry} />
+          
         </Route>
       </Router>
     )
@@ -23,4 +26,5 @@ class App extends React.Component{
 
 ReactDOM.render(<App />, document.getElementById('app'))
 
-// <IndexRoute component={Home} />
+//<Route path='/experiences' component={AddOrEditExperience} />
+//<Route path='/events' component={AddOrEditEvent} />

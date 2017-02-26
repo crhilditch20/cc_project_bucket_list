@@ -9,14 +9,12 @@ class Countries extends React.Component {
     }
   }
 
-
-
   render () {
     var countries = this.props.countries.map(function(country, index){
       return (
         <div className="bucketlistItem">
         <img className="homepage-pic" src={country.country.imageURL}></img>
-          <button id="country" key={index} value={index}>{country.country.name}</button>
+          <button className="goToItem" key={index} value={index}>{country.country.name}</button>
         </div>
         );
       }.bind(this));

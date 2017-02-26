@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link, browserHistory } from 'react-router'
 import Countries from './Countries'
+import Experiences from './Experiences'
+import Events from './Events'
 
 class BucketList extends React.Component {
 
@@ -53,8 +55,8 @@ class BucketList extends React.Component {
   render () {
     return <div className="bucketlist-homepage">
       <Countries countries={this.state.bucketlistCountries}/>
-
-
+        <Experiences experiences={this.state.bucketlistExperiences}/>
+          <Events events={this.state.bucketlistEvents}/>
 
     </div>
   }

@@ -26,18 +26,21 @@ country2 = Country.create({
 experience1 = Experience.create({
   title: "Scuba diving",
   description: "Swimming with the fishes",
-  season: "summer"
+  season: "summer",
+  imageURL: "http://www.seachallengers.com/wp-content/uploads/2016/05/scuba-diving.jpg"
   })
 experience2 = Experience.create({
   title: "Kodo drumming",
   description: "Watch a kodo drumming show",
-  season: "any"
+  season: "any",
+  imageURL: "https://connectere.files.wordpress.com/2013/02/kodo-_credit_shinji_minami_.jpg"
   })
 
   event1 = Event.create({
     title: "Rio Carnivale",
     description: "World's biggest carnivale celebrations",
-    venue: "All over Rio"
+    venue: "All over Rio",
+    imageURL: "http://www.finisterra.ca/wp-content/uploads/2016/08/Sambadrome-Parade-Rio-Carnaval.jpg"
     })
 
 user1 = User.create({
