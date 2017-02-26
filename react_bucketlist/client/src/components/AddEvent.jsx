@@ -70,7 +70,8 @@ class AddEvent extends React.Component {
   render () {
     var addEventDiv = 
       <div>
-        <form onSubmit={this.addToDatabase} className='login-form'>
+        <h4>Add a new event to my bucket list</h4>
+        <form onSubmit={this.addToDatabase} className='bucketlist-form'>
           <input type="text" onChange={this.handleOnChangeTitle.bind(this)}  placeholder="Title" />
           <input type="text" onChange={this.handleOnChangeDescription.bind(this)}  placeholder="Description" />
           <input type="text" onChange={this.handleOnChangeVenue.bind(this)}  placeholder="Venue" />

@@ -6,11 +6,12 @@ body{
 
 h1, h2, h4 {
   color: Black;
+  padding: 10px;
 }
 
 .container{  
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,7 +22,7 @@ h1, h2, h4 {
 .bucketlist-homepage {
   display: flex;
   align-content: flex-start;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
 }
 
 .title{
@@ -48,11 +49,6 @@ h1, h2, h4 {
   border-radius: 5px;
 }
 
-.listing{
-  width: 100%;
-  height: 100vh;
-}
-
 nav{
   display: flex;
   align-items: center;
@@ -60,13 +56,13 @@ nav{
   padding: 10px;
   margin: 0 0 20px 0;
 }
-
+/*
 .search-box{
   padding: 5px;
   border-radius: 4px;
   margin-left: 10vh;
   font-size: 20px;
-}
+}*/
 
 .login-form{
   margin: 0 auto;
@@ -80,6 +76,18 @@ nav{
   width: 100%;
 }
 
+.bucketlist-form{
+  margin: 0 auto;
+  width: 90%;
+}
+
+.bucketlist-form input{
+  display: block;
+  margin: 20px 0;
+  padding: 10px;
+  width: 100%;
+}
+
 button{
   margin: auto;
   border: 1px solid OrangeRed;
@@ -87,8 +95,6 @@ button{
   color: white;
   font-size: 10px;
   border-radius: 5px;
-  width: 120px;
-  height: 40px;
 }
 
 button:hover{

@@ -58,7 +58,8 @@ class AddExperience extends React.Component {
   render () {
     var addExperienceDiv = 
       <div>
-        <form onSubmit={this.addToDatabase} className='login-form'>
+        <h4>Add a new experience to my bucket list</h4>
+        <form onSubmit={this.addToDatabase} className='bucketlist-form'>
           <input type="text" onChange={this.handleOnChangeTitle.bind(this)}  placeholder="Title" />
           <input type="text" onChange={this.handleOnChangeDescription.bind(this)}  placeholder="Description" />
           <input type="text" onChange={this.handleOnChangeSeason.bind(this)}  placeholder="Best season to try this out" />

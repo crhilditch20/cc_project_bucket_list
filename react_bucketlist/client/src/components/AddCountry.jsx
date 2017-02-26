@@ -70,7 +70,8 @@ class AddCountry extends React.Component {
   render () {
     var addCountryDiv = 
       <div>
-        <form onSubmit={this.addToDatabase} className='login-form'>
+        <h4>Add a new country to my bucket list</h4>
+        <form onSubmit={this.addToDatabase} className='bucketlist-form'>
           <input type="text" onChange={this.handleOnChangeName.bind(this)}  placeholder="Country name" />
           <input type="text" onChange={this.handleOnChangeRegion.bind(this)}  placeholder="Region" />
           <input type="text" onChange={this.handleOnChangeSeason.bind(this)}  placeholder="Best season to visit" />
