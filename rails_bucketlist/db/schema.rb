@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170227103447) do
+ActiveRecord::Schema.define(version: 20170227104309) do
 
   create_table "bucket_list_countries", force: :cascade do |t|
     t.integer  "country_id"
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20170227103447) do
     t.string   "mapURL"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.date     "date"
+    t.string   "date"
     t.string   "imageURL"
   end
 

@@ -40,6 +40,7 @@ experience2 = Experience.create({
     title: "Rio Carnivale",
     description: "World's biggest carnivale celebrations",
     venue: "All over Rio",
+    date: "February",
     imageURL: "http://www.finisterra.ca/wp-content/uploads/2016/08/Sambadrome-Parade-Rio-Carnaval.jpg"
     })
 

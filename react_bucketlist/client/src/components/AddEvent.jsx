@@ -75,7 +75,7 @@ class AddEvent extends React.Component {
           <input type="text" onChange={this.handleOnChangeTitle.bind(this)}  placeholder="Title" />
           <input type="text" onChange={this.handleOnChangeDescription.bind(this)}  placeholder="Description" />
           <input type="text" onChange={this.handleOnChangeVenue.bind(this)}  placeholder="Venue" />
-          <input type="text" onChange={this.handleOnChangeDate.bind(this)}  placeholder="Date" />
+          <input type="text" onChange={this.handleOnChangeDate.bind(this)}  placeholder="Date or time of year" />
           <input type="text" onChange={this.handleOnChangeMapURL.bind(this)}  placeholder="Map URL" />
           <input type="text" onChange={this.handleOnChangeImageURL.bind(this)}  placeholder="Image URL" />
 
