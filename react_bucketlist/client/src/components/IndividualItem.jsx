@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router';
+import EditCountry from './EditCountry';
 
 class IndividualItem extends React.Component {
 
   constructor (props) {
     super(props);
     this.state = {
-      thisItem: this.props.item.id
+      thisItemID: this.props.item.id,
+
     }
   }
 
@@ -36,8 +38,7 @@ class IndividualItem extends React.Component {
           <p>What's that? {this.props.item.description}</p>
           <p>Where's it happening: {this.props.item.venue}</p>
           <p>When's it happening: {this.props.item.date}</p>
-            
-
+  
         </div>
       break;
     }
@@ -50,7 +51,7 @@ class IndividualItem extends React.Component {
          <button>Been there, done that!</button>
       </div>
       <img id='itempage-pic' src={this.props.item.imageURL}></img>
-
+      <EditCountry item={this.props.item}/>
       
       </div>
       );

@@ -2,11 +2,6 @@ class CountriesController < ApplicationController
 
   before_action :authenticate_user!
 
-  def getCountryObject(id)
-    listCountry = BucketListCountry.find(id)
-    actualCountry = Country.find(listCountry.country_id)
-    return actualCountry
-  end
 
   def index
     countries = current_user.bucket_list_countries
@@ -24,7 +19,8 @@ class CountriesController < ApplicationController
     newCountry = Country.create(country_params())
     listCountry = BucketListCountry.create({
       country: newCountry,
-      user: current_user
+      user: current_user,
+      visitLength: country_params[:visitLength]
       })
     render({json: listCountry.as_json({
       include: :country
@@ -34,7 +30,7 @@ class CountriesController < ApplicationController
 
 #need to test this to make sure the original country in the database is being updated and the bucketlistcountry object will still point to it
   def update
-    country = getCountryObject(params[:id])
+    country = Country.find(params[:id]);
       if country.update_attributes(country_params())
         render({json: country})
       else
@@ -54,7 +50,13 @@ class CountriesController < ApplicationController
 
   private
   def country_params
-    params.require(:country).permit([:name, :region, :season, :visitLength, :mapURL, :imageURL])
+    params.require(:country).permit([:name, :region, :season, :mapURL, :imageURL])
+  end
+
+  def getCountryObject(id)
+    listCountry = BucketListCountry.find(id)
+    actualCountry = Country.find(listCountry.country_id)
+    return actualCountry
   end
 
 end
