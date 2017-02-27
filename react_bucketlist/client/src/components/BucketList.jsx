@@ -14,7 +14,8 @@ class BucketList extends React.Component {
       bucketlistCountries: [],
       bucketlistExperiences: [],
       bucketlistEvents: [],
-      selectedItem: null
+      selectedItem: null,
+      selectedItemType: ""
     }
   }
 
@@ -65,6 +66,7 @@ class BucketList extends React.Component {
          if(request.status === 200){
           var data = JSON.parse(request.responseText)
           this.setState({selectedItem: data})
+          this.setState({selectedItemType: "country"})
           console.log(data)
          } else{
           console.log("object not found")
@@ -86,6 +88,7 @@ class BucketList extends React.Component {
          if(request.status === 200){
           var data = JSON.parse(request.responseText)
           this.setState({selectedItem: data})
+          this.setState({selectedItemType: "experience"})
           console.log(data)
          } else{
           console.log("object not found")
@@ -107,6 +110,7 @@ class BucketList extends React.Component {
          if(request.status === 200){
           var data = JSON.parse(request.responseText)
           this.setState({selectedItem: data})
+          this.setState({selectedItemType: "event"})
           console.log(data)
          } else{
           console.log("object not found")
@@ -126,7 +130,7 @@ class BucketList extends React.Component {
     if (this.state.selectedItem){
       mainDiv = 
       <div className="individual-item">
-        <IndividualItem item={this.state.selectedItem}/>
+        <IndividualItem item={this.state.selectedItem} category={this.state.selectedItemType}/>
       </div>
     }
 

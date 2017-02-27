@@ -49,19 +49,12 @@ h1, h2, h4 {
   border-radius: 5px;
 }
 
-nav{
+/*nav{
   display: flex;
   align-items: center;
   background: #eee;
   padding: 10px;
   margin: 0 0 20px 0;
-}
-/*
-.search-box{
-  padding: 5px;
-  border-radius: 4px;
-  margin-left: 10vh;
-  font-size: 20px;
 }*/
 
 .login-form{
@@ -116,6 +109,19 @@ button:hover{
 #itempage-pic {
   width: 400px;
   height: 300px;
+}
+
+.item-page {
+  display: flex; 
+  align-content: flex-start;
+  flex-flow: row nowrap;
+}
+
+.info-div {
+  border: black 1px solid;
+  padding: 10px;
+  margin: 10px;
+
 }
 
 /*.show-image{
