@@ -109,6 +109,8 @@ button:hover{
 #itempage-pic {
   width: 400px;
   height: 300px;
+  padding:10px;
+  margin:10px;
 }
 
 .item-page {
@@ -117,11 +119,20 @@ button:hover{
   flex-flow: row nowrap;
 }
 
-.info-div {
+.info-container {
   border: black 1px solid;
   padding: 10px;
   margin: 10px;
+}
 
+.info-div {
+  text-align: left
+}
+
+#done-it {
+  -webkit-transform: scale(2);
+  padding: 10px;
+  margin: 10px;
 }
 
 /*.show-image{

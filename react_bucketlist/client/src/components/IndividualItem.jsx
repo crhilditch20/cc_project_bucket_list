@@ -11,10 +11,10 @@ class IndividualItem extends React.Component {
   }
 
   render () {
-  var info = <div>Some info</div>
+  var info = <div className="info-div">Some info</div>
     switch(this.props.category){
       case "country":
-        info = <div>
+        info = <div className="info-div">
           <h4>Where I'm going: {this.props.item.name}</h4>
           <p>Region: {this.props.item.region}</p>
           <p>Best season to visit: {this.props.item.season}</p>
@@ -23,7 +23,7 @@ class IndividualItem extends React.Component {
         </div>
       break;
       case "experience":
-       info = <div>
+       info = <div className="info-div">
         <h4>What I want to do: {this.props.item.title}</h4>
         <p>What's that? {this.props.item.description}</p>
         <p>Best season to try this: {this.props.item.season}</p>
@@ -31,7 +31,7 @@ class IndividualItem extends React.Component {
        </div>
       break;
       case "event":
-        info = <div>
+        info = <div className="info-div">
           <h4>Event I want to go to: {this.props.item.title}</h4>
           <p>What's that? {this.props.item.description}</p>
           <p>Where's it happening: {this.props.item.venue}</p>
@@ -44,9 +44,10 @@ class IndividualItem extends React.Component {
 
     return (
       <div className='item-page'>
-      <div className='info-div'>
+      <div className='info-container'>
         {info}
-         
+         <input type='checkbox' id='done-it'></input>
+         <button>Been there, done that!</button>
       </div>
       <img id='itempage-pic' src={this.props.item.imageURL}></img>
 
