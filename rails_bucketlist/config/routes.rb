@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   resources(:countries)
   resources(:experiences)
   resources(:events)
+  resources(:bucketlistcountries)
 
 end

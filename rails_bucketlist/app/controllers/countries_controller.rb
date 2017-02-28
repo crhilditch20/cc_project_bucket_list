@@ -2,7 +2,6 @@ class CountriesController < ApplicationController
 
   before_action :authenticate_user!
 
-
   def index
     countries = current_user.bucket_list_countries
     render  :json => countries.as_json({
@@ -41,15 +40,14 @@ class CountriesController < ApplicationController
     })
   end
 
-#need to test this to make sure the original country in the database is being updated and the bucketlistcountry object will still point to it
-  def update
-    country = Country.find(params[:id]);
-      if country.update_attributes(country_params())
-        render({json: country})
-      else
-        render({json: :update_failed})
-      end
-  end
+  # def update
+  #   bucketListCountry = BucketListCountry.find(params[:id]);
+  #     if bucketListcountry.update_attributes(country_params())
+  #       render({json: bucketListCountry})
+  #     else
+  #       render({json: :update_failed})
+  #     end
+  # end
 
 #do I need to also delete the BucketListCountry?
   def destroy
