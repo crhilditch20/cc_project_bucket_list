@@ -14342,3 +14342,82 @@ Processing by CountriesController#show as */*
 Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
 
 
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/user/Desktop/cx3_8/project_4_bucket_list/bucketlist/rails_bucketlist/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/user/Desktop/cx3_8/project_4_bucket_list/bucketlist/rails_bucketlist/app/models/application_record.rb:1)
+Started GET "/users.json" for ::1 at 2017-02-28 19:41:46 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: skip_before_filter is deprecated and will be removed in Rails 5.1. Use skip_before_action instead. (called from <class:ApplicationController> at /Users/user/Desktop/cx3_8/project_4_bucket_list/bucketlist/rails_bucketlist/app/controllers/application_controller.rb:3)
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Completed 401 Unauthorized in 17ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users.json" for ::1 at 2017-02-28 19:43:12 +0000
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users.json" for ::1 at 2017-02-28 19:43:54 +0000
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2017-02-28 19:44:03 +0000
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"claire@myemail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"claire@myemail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "claire@myemail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-02-28 19:44:03 UTC], ["sign_in_count", 2], ["updated_at", 2017-02-28 19:44:03 UTC], ["id", 18]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 174ms (Views: 0.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users.json" for ::1 at 2017-02-28 19:44:57 +0000
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users.json" for ::1 at 2017-02-28 19:45:34 +0000
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users.json" for ::1 at 2017-02-28 19:45:44 +0000
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users.json" for ::1 at 2017-02-28 19:46:41 +0000
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-02-28 19:46:45 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.4ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 18]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 57], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.4ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 18]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.4ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 18]]
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+Completed 200 OK in 83ms (Views: 0.9ms | ActiveRecord: 4.3ms)
+
+
