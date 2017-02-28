@@ -143,7 +143,7 @@ button:hover{
 }
 
 .info-container {
-  border: black 1px solid;
+
   padding: 10px;
   margin: 10px;
 }
@@ -157,41 +157,3 @@ button:hover{
   padding: 10px;
   margin: 10px;
 }
-
-/*.show-image{
-  width: 90%;
-}*/
-
-/*.shows-container{
-  display: flex;
-  justify-content: center; 
-  flex-wrap: wrap;
-}
-
-.shows-container > *{
-  min-width: 100px;
-  min-height: 100px;
-}
-
-.show{
-  background: rgba(0, 0, 0, .8);
-  color: #eee;
-  margin: 10px;
-  padding: 10px;
-  width: 350px;
-}
-
-.show-title{
-  margin: 0;
-}*/
-
-/*.show-series{
-  font-size: 10px;
-  margin: 0;
-}
-
-.show-description{
-  font-size: 12px;
-  padding: 0 20px;
-  text-align: center;
-}*/
