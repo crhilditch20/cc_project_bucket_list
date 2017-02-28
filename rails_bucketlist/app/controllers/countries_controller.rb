@@ -16,11 +16,20 @@ class CountriesController < ApplicationController
   end
 
   def create
-    newCountry = Country.create(country_params())
+    object = country_params()
+    visitLength = object["visitLength"]
+    season = object["season"]
+    countryObject = {
+      name: object["name"],
+      region: object["region"],
+      imageURL: object["imageURL"],
+      mapURL: object["mapURL"]
+    }
+    newCountry = Country.create(countryObject)
     listCountry = BucketListCountry.create({
       country: newCountry,
       user: current_user,
-      visitLength: country_params[:visitLength]
+      visitLength: visitLength
       })
     render({json: listCountry.as_json({
       include: :country
@@ -50,7 +59,7 @@ class CountriesController < ApplicationController
 
   private
   def country_params
-    params.require(:country).permit([:name, :region, :season, :mapURL, :imageURL])
+    params.require(:country).permit([:name, :region, :season, :visitLength, :mapURL, :imageURL])
   end
 
   def getCountryObject(id)

@@ -17,7 +17,6 @@ class AddCountry extends React.Component {
   }
 
   addToDatabase (event) {
-    console.log("event starting")
     const url = "http://localhost:5000/countries"
     event.preventDefault();
     const request = new XMLHttpRequest();
@@ -26,7 +25,6 @@ class AddCountry extends React.Component {
       request.withCredentials = true;
       request.onload = () => {
         if (request.status === 200){
-          console.log("Added to database");
           this.setState({success: true});
         }
       }
@@ -40,6 +38,7 @@ class AddCountry extends React.Component {
           mapURL: this.state.mapURL
         }
       }
+      console.log(data);
       request.send(JSON.stringify(data));
     }
 
