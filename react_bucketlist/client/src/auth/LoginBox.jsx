@@ -59,4 +59,4 @@ class LoginBox extends React.Component {
   }
 }
 
-export default LoginBox
+export default LoginBox;

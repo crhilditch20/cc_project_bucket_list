@@ -12,4 +12,5 @@ class User < ApplicationRecord
 
   has_many :bucket_list_events
   has_many :events, through: :bucket_list_events, source: :event
+
 end

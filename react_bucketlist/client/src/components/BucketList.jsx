@@ -54,8 +54,8 @@ class BucketList extends React.Component {
     }
 
     loadIndividualCountry (countryID) {
+      console.log(countryID);
       var url = 'http://localhost:5000/countries/' + countryID;
-      console.log(url);
       var request = new XMLHttpRequest()
       request.open('GET', url)
 
@@ -67,7 +67,6 @@ class BucketList extends React.Component {
           var data = JSON.parse(request.responseText)
           this.setState({selectedItem: data})
           this.setState({selectedItemType: "country"})
-          console.log(data)
          } else{
           console.log("object not found")
          }
@@ -77,7 +76,6 @@ class BucketList extends React.Component {
 
     loadIndividualExperience (experienceID) {
       var url = 'http://localhost:5000/experiences/' + experienceID;
-      console.log(url);
       var request = new XMLHttpRequest()
       request.open('GET', url)
 
@@ -89,7 +87,6 @@ class BucketList extends React.Component {
           var data = JSON.parse(request.responseText)
           this.setState({selectedItem: data})
           this.setState({selectedItemType: "experience"})
-          console.log(data)
          } else{
           console.log("object not found")
          }
@@ -99,7 +96,6 @@ class BucketList extends React.Component {
 
     loadIndividualEvent (eventID) {
       var url = 'http://localhost:5000/events/' + eventID;
-      console.log(url);
       var request = new XMLHttpRequest()
       request.open('GET', url)
 
@@ -111,7 +107,6 @@ class BucketList extends React.Component {
           var data = JSON.parse(request.responseText)
           this.setState({selectedItem: data})
           this.setState({selectedItemType: "event"})
-          console.log(data)
          } else{
           console.log("object not found")
          }
@@ -119,22 +114,29 @@ class BucketList extends React.Component {
       request.send(null)
     }
 
+    // pageRefresh () {
+    //   this.setState({selectedItem: null});
+    // }
+
 
   render () {
     var mainDiv = 
     <div className="bucketlist-homepage">
-    <div className="title-div"> <img className='icon' src="./images/bucket.png"></img> <h2>Welcome to My Bucket List!</h2> </div>
+    <div className="title-div"> <img className='icon' src="./images/bucket.png"></img> <h2>Welcome to My Bucket List!</h2> 
+    <Link to='/'>Sign out</Link>
+    </div>
     <div className="category-div">
       <Countries countries={this.state.bucketlistCountries} loadCountry={this.loadIndividualCountry.bind(this)}/>
         <Experiences experiences={this.state.bucketlistExperiences} loadExperience={this.loadIndividualExperience.bind(this)}/>
           <Events events={this.state.bucketlistEvents} loadEvent={this.loadIndividualEvent.bind(this)}/>
+
     </div>
     </div>
 
     if (this.state.selectedItem){
       mainDiv = 
       <div className="individual-item">
-        <IndividualItem item={this.state.selectedItem} category={this.state.selectedItemType} reload={this.loadIndividualCountry.bind(this)}/>
+        <IndividualItem item={this.state.selectedItem} category={this.state.selectedItemType} reload={this.loadIndividualCountry.bind(this)} />
       </div>
     }
 
@@ -145,5 +147,6 @@ class BucketList extends React.Component {
       );
     }
 }
+//pageRefresh={this.pageRefresh.bind(this)}
 
 export default BucketList

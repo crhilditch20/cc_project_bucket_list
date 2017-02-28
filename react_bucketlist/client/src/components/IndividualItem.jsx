@@ -17,12 +17,10 @@ class IndividualItem extends React.Component {
   }
 
   componentWillReceiveProps () {
-    console.log("received");
     this.setState({thisItem: this.props.item});
   }
 
   render () {
-    console.log(this.props.category);
   var info = <div className="info-div">Some info</div>
     switch(this.props.category){
       case "country": 
@@ -80,10 +78,12 @@ class IndividualItem extends React.Component {
       return (
         <div>
         {itemPageDiv}
+       
         </div>
         );
       }
   }
 
+// <button onClick={this.props.pageRefresh}>Return to bucket list</button>
 
 export default IndividualItem;
