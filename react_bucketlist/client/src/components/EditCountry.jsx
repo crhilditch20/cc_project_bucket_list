@@ -25,6 +25,7 @@ class EditCountry extends React.Component {
         if (request.status === 200){
           console.log("updated");
           this.setState({success: true});
+          this.props.reload(this.props.item.id);
         }
       }
       const data = {
@@ -48,11 +49,12 @@ class EditCountry extends React.Component {
   render () {
     var editCountryDiv = 
       <div>
-        <h4>Update details in bucket list</h4>
+        <h4>Update this bucket list entry</h4>
         <form onSubmit={this.editItem} className='bucketlist-form'>
-     
-          <input type="text" defaultValue={this.props.item.season} onChange={this.handleOnChangeSeason.bind(this)}/>
-          <input type="text" defaultValue={this.props.item.visitLength} onChange={this.handleOnChangeVisitLength.bind(this)}/>
+          <label> Update season
+          <input type="text" defaultValue={this.props.item.season} onChange={this.handleOnChangeSeason.bind(this)}/></label>
+          <label> Update number of weeks
+          <input type="text" defaultValue={this.props.item.visitLength} onChange={this.handleOnChangeVisitLength.bind(this)}/></label>
          
 
           <button onClick={this.editItem.bind(this)}>Update</button>

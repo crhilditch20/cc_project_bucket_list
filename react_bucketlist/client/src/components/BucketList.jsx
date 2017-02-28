@@ -119,18 +119,22 @@ class BucketList extends React.Component {
       request.send(null)
     }
 
+
   render () {
     var mainDiv = 
     <div className="bucketlist-homepage">
+    <div className="title-div"> <img className='icon' src="./images/bucket.png"></img> <h2>Welcome to My Bucket List!</h2> </div>
+    <div className="category-div">
       <Countries countries={this.state.bucketlistCountries} loadCountry={this.loadIndividualCountry.bind(this)}/>
         <Experiences experiences={this.state.bucketlistExperiences} loadExperience={this.loadIndividualExperience.bind(this)}/>
           <Events events={this.state.bucketlistEvents} loadEvent={this.loadIndividualEvent.bind(this)}/>
+    </div>
     </div>
 
     if (this.state.selectedItem){
       mainDiv = 
       <div className="individual-item">
-        <IndividualItem item={this.state.selectedItem} category={this.state.selectedItemType}/>
+        <IndividualItem item={this.state.selectedItem} category={this.state.selectedItemType} reload={this.loadIndividualCountry.bind(this)}/>
       </div>
     }
 
