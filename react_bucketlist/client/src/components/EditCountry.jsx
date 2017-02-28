@@ -7,12 +7,12 @@ class EditCountry extends React.Component {
     super(props);
     this.state = {
       currentItem: this.props.item,
-      name: "",
-      region: "",
+      name: this.props.item.country.name,
+      region: this.props.item.country.region,
       season: "",
       visitLength: null,
-      imageURL: "",
-      mapURL: ""
+      imageURL: this.props.item.country.imageURL,
+      mapURL: this.props.item.country.mapURL
     }
   }
 
@@ -74,12 +74,12 @@ class EditCountry extends React.Component {
       <div>
         <h4>Update details in bucket list</h4>
         <form onSubmit={this.editItem} className='bucketlist-form'>
-          <input type="text" defaultValue={this.props.item.name} onChange={this.handleOnChangeName.bind(this)}  />
-          <input type="text" defaultValue={this.props.item.region}onChange={this.handleOnChangeRegion.bind(this)} />
+          <input type="text" value={this.props.item.country.name} onChange={this.handleOnChangeName.bind(this)}  />
+          <input type="text" value={this.props.item.country.region}onChange={this.handleOnChangeRegion.bind(this)} />
           <input type="text" defaultValue={this.props.item.season} onChange={this.handleOnChangeSeason.bind(this)}/>
           <input type="text" defaultValue={this.props.item.visitLength} onChange={this.handleOnChangeVisitLength.bind(this)}/>
-          <input type="text" defaultValue={this.props.item.imageURL} onChange={this.handleOnChangeImageURL.bind(this)} />
-          <input type="text" defaultValue={this.props.item.mapURL} onChange={this.handleOnChangeMapURL.bind(this)} />
+          <input type="text" value={this.props.item.country.imageURL} onChange={this.handleOnChangeImageURL.bind(this)} />
+          <input type="text" value={this.props.item.country.mapURL} onChange={this.handleOnChangeMapURL.bind(this)} />
 
           <button onClick={this.editItem.bind(this)}>Update</button>
         </form>

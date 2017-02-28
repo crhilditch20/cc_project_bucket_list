@@ -9,14 +9,12 @@ User.delete_all()
 country1 = Country.create({ 
   name: "Japan",
   region: "Asia",
-  season: "autumn",
   mapURL: "",
   imageURL: "http://volcano.oregonstate.edu/sites/default/files/VWNews/2014-06-12-httpi.telegraph.co_.ukmultimediaarchive02551fuji_2551323b.jpg"
 })
 country2 = Country.create({ 
   name: "Cuba",
   region: "Central America",
-  season: "any",
   mapURL: "",
   imageURL: "http://images.goaheadtours.com/banner/21292/downtown-havana-cuba-with-vintage-cars.jpg"
 })
@@ -51,13 +49,15 @@ user1 = User.create({
 listCountry1 = BucketListCountry.create({
   country: country1,
   user: user1,
-  visitLength: 2
+  visitLength: 2,
+  season: "autumn"
   })
 
 listCountry2 = BucketListCountry.create({
   country: country2,
   user: user1,
-  visitLength: 3
+  visitLength: 3,
+  season: "spring"
   })
 
 listExperience1 = BucketListExperience.create({

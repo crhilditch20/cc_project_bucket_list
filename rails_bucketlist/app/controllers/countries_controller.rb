@@ -11,8 +11,11 @@ class CountriesController < ApplicationController
   end
 
   def show
-    country = getCountryObject(params[:id])
-    render({json: country})
+    bucketListCountry = BucketListCountry.find(params[:id])
+    # country = getCountryObject(params[:id])
+    render  :json => bucketListCountry.as_json({
+        include: :country
+        })
   end
 
   def create
@@ -29,7 +32,8 @@ class CountriesController < ApplicationController
     listCountry = BucketListCountry.create({
       country: newCountry,
       user: current_user,
-      visitLength: visitLength
+      visitLength: visitLength,
+      season: season
       })
     render({json: listCountry.as_json({
       include: :country

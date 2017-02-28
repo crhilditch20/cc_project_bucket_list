@@ -17,9 +17,9 @@ class IndividualItem extends React.Component {
     switch(this.props.category){
       case "country":
         info = <div className="info-div">
-          <h4>Where I'm going: {this.props.item.name}</h4>
-          <p>Region: {this.props.item.region}</p>
-          <p>Best season to visit: {this.props.item.season}</p>
+          <h4>Where I'm going: {this.props.item.country.name}</h4>
+          <p>Region: {this.props.item.country.region}</p>
+          <p>Season I want to visit: {this.props.item.season}</p>
           <p>How long for: {this.props.item.visitLength} weeks</p>
 
         </div>

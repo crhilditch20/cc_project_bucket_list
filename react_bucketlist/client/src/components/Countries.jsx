@@ -13,6 +13,7 @@ class Countries extends React.Component {
   goToCountry (event) {
     var countryID = event.target.value;
     this.props.loadCountry(countryID);
+    console.log(countryID);
   }
 
   render () {
