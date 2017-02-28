@@ -4,22 +4,16 @@ import EditCountry from './EditCountry';
 
 class IndividualItem extends React.Component {
 
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
       thisItem: null,
-      itemUpdated: false,
-      thisImage: null
+      itemUpdated: false
     }
   }
 
   componentDidMount () {
     this.setState({thisItem: this.props.item});
-    if (this.props.category === "country"){
-      this.setState({thisImage: this.props.item.country.imageURL});
-    } else {
-      this.setState({thisImage: this.props.item.imageURL});
-    }
   }
 
   componentWillReceiveProps () {
@@ -28,6 +22,7 @@ class IndividualItem extends React.Component {
   }
 
   render () {
+    console.log(this.props.category);
   var info = <div className="info-div">Some info</div>
     switch(this.props.category){
       case "country": 
@@ -67,7 +62,7 @@ class IndividualItem extends React.Component {
          <input type='checkbox' id='done-it'></input>
          <button>Been there, done that!</button>
       </div>
-      <img id='itempage-pic' src={this.state.thisImage}></img>
+      <img id='itempage-pic' src={this.props.item.country.imageURL}></img>
       <EditCountry item={this.props.item} reload={this.props.reload}/>
       </div>
     } else {
