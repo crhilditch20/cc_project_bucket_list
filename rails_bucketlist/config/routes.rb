@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   resources(:events)
   resources(:bucketlistcountries)
   resources(:archivedcountries)
+  resources(:archivedexperiences)
+  resources(:archivedevents)
 
 end
