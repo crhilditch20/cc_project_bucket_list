@@ -6,8 +6,7 @@ class ArchiveCountry extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      country: "Testing",
-      country_id: null,
+      country_id: this.props.location.query.id,
       best_memory: "",
       best_photo: "",
       success: false
@@ -52,7 +51,7 @@ class ArchiveCountry extends React.Component {
       <div>
         <h4>Add this country to my archive</h4>
         <form onSubmit={this.addToDatabase} className='bucketlist-form'>
-          <input type="text" value={this.state.country} />
+          <input type="text" readOnly={this.props.location.query.name} />
           <input type="text" onChange={this.handleOnChangeMemory.bind(this)}  placeholder="What's your best memory?" />
           <input type="text" onChange={this.handleOnChangePhoto.bind(this)}  placeholder="Add a URL to your favourite photo" />
           
