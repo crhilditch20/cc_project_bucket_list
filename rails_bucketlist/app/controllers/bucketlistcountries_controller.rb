@@ -29,4 +29,15 @@ class BucketlistcountriesController < ApplicationController
         end
   end
 
+  def destroy
+      archivedCountry = Country.find(params[:id])
+      entryToDelete = BucketListCountry.where({country: archivedCountry})
+
+        if BucketListCountry.destroy(entryToDelete)
+          render({json: {status: :success}})
+        else
+          render({json: {status: :delete_failed}})
+        end
+  end
+
 end

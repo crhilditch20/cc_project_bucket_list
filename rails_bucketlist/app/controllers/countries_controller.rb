@@ -40,25 +40,6 @@ class CountriesController < ApplicationController
     })
   end
 
-  # def update
-  #   bucketListCountry = BucketListCountry.find(params[:id]);
-  #     if bucketListcountry.update_attributes(country_params())
-  #       render({json: bucketListCountry})
-  #     else
-  #       render({json: :update_failed})
-  #     end
-  # end
-
-# #do I need to also delete the BucketListCountry?
-#   def destroy
-#     country = getCountryObject(params[:id])
-#       if country.destroy!
-#         render({json: {status: :success}})
-#       else
-#         render({json: {status: :delete_failed}})
-#       end
-#   end
-
   private
   def country_params
     params.require(:country).permit([:name, :region, :season, :visitLength, :mapURL, :imageURL])

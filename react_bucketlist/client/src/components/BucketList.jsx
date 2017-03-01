@@ -67,7 +67,7 @@ class BucketList extends React.Component {
           var data = JSON.parse(request.responseText);
           this.setState({selectedItem: data});
           this.setState({selectedItemType: "country"});
-          this.changeAppSelectedItem();
+         
          } else{
           console.log("object not found")
          }
@@ -122,10 +122,6 @@ class BucketList extends React.Component {
     pageRefresh () {
       this.setState({selectedItem: null});
       this.setState({selectedItemType: null});
-    }
-
-    changeAppSelectedItem() {
-      this.props.route.handleSelection(this.state.selectedItem);
     }
 
 
