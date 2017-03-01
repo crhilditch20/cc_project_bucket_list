@@ -41,7 +41,7 @@ h1, h2, h4 {
   flex-flow: row nowrap;
 }
 
-#countries {
+/*#countries {
 
 
 }
@@ -52,7 +52,7 @@ h1, h2, h4 {
 
 #events {
 
-}
+}*/
 
 .title{
   text-transform: uppercase;
@@ -73,6 +73,7 @@ h1, h2, h4 {
   border: 1px solid OrangeRed;
   background-color: orange;
   color: white;
+  font-size: 10px;
  /* display: inline-block;*/
   text-decoration: none;
   border-radius: 5px;

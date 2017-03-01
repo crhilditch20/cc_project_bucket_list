@@ -20,10 +20,6 @@ class IndividualItem extends React.Component {
     this.setState({thisItem: this.props.item});
   }
 
-  // archiveButtonClick () {
-
-  // }
-
   render () {
   var info = <div className="info-div">Some info</div>
     switch(this.props.category){
