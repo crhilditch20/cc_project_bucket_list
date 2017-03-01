@@ -24,6 +24,7 @@ class ArchiveExperience extends React.Component {
       request.onload = () => {
         if (request.status === 200){
           this.setState({success: true});
+          this.removeFromBucketList();
         }
       }
       const data = {
@@ -35,6 +36,21 @@ class ArchiveExperience extends React.Component {
       }
       console.log(data);
       request.send(JSON.stringify(data));
+    }
+
+    removeFromBucketList () {
+      const url = "http://localhost:5000/bucketlistexperiences/"+ this.state.experience_id;
+      event.preventDefault();
+      const request = new XMLHttpRequest();
+        request.open('DELETE', url);
+        request.setRequestHeader('Content-Type', 'application/json');
+        request.withCredentials = true;
+        request.onload = () => {
+          if (request.status === 200){
+            console.log("deleted");
+          }
+        }
+        request.send(null);
     }
 
   handleOnChangeMemory(event) {

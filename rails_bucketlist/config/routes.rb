@@ -4,12 +4,18 @@ Rails.application.routes.draw do
   get 'bucketlists' => 'bucketlists#index'
 
   resources (:users)
+
   resources(:countries)
   resources(:experiences)
   resources(:events)
+
   resources(:bucketlistcountries)
+  resources(:bucketlistexperiences)
+  resources(:bucketlistevents)
+
   resources(:archivedcountries)
   resources(:archivedexperiences)
   resources(:archivedevents)
+  
 
 end
