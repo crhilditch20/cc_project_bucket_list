@@ -8,6 +8,7 @@ import AddExperience from './components/AddExperience'
 import AddEvent from './components/AddEvent'
 import ArchiveCountry from './components/ArchiveCountry'
 import ArchiveExperience from './components/ArchiveExperience'
+import ArchiveEvent from './components/ArchiveEvent'
 
 import {Router, Route, IndexRoute, hashHistory} from 'react-router'
 
@@ -43,7 +44,7 @@ class App extends React.Component{
           <Route path='/events' component={AddEvent} />
           <Route path='/archivedcountries' component={ArchiveCountry}/>
           <Route path='/archivedexperiences' component={ArchiveExperience}/>
-          
+          <Route path='/archivedevents' component={ArchiveEvent}/>
           
         </Route>
       </Router>

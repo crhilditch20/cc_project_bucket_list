@@ -16,7 +16,7 @@ class ArchivedeventsController < ApplicationController
 
   private
   def archive_event_params
-    params.require(:archivedEvent).permit([:event_id, :best_memory, :best_photo])
+    params.require(:archivedevent).permit([:event_id, :best_memory, :best_photo])
   end
 
 end

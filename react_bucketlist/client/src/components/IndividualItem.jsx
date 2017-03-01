@@ -75,6 +75,7 @@ class IndividualItem extends React.Component {
       <img id='itempage-pic' src={this.props.item.country.imageURL}></img>
       <EditCountry item={this.props.item} reload={this.props.reload}/>
       </div>
+
     } else if (this.props.category === "experience"){
       itemPageDiv = 
       <div className='item-page'>
@@ -90,8 +91,27 @@ class IndividualItem extends React.Component {
             }
           }
           }>Been there, done that!</Link>
-
       </div>
+
+      <img id='itempage-pic' src={this.props.item.imageURL}></img>
+      </div>
+    } else {
+      itemPageDiv = 
+      <div className='item-page'>
+      <div className='info-container'>
+        {info}
+         <input type='checkbox' id='done-it'></input>
+         <Link className='link-button' to={
+          {
+            "pathname": '/archivedevents',
+            "query": {
+              "id": this.props.item.id,
+              "event": this.props.item.title
+            }
+          }
+          }>Been there, done that!</Link>
+      </div>
+      
       <img id='itempage-pic' src={this.props.item.imageURL}></img>
       </div>
     }
