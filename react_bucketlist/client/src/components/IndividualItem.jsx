@@ -70,7 +70,6 @@ class IndividualItem extends React.Component {
               "name": this.props.item.country.name
             }
           }
-          }>
           }>Been there, done that!</Link>
       </div>
       <img id='itempage-pic' src={this.props.item.country.imageURL}></img>

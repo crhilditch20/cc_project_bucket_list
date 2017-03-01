@@ -5,6 +5,7 @@ BucketListCountry.delete_all()
 BucketListExperience.delete_all()
 BucketListEvent.delete_all()
 User.delete_all()
+ArchivedCountry.delete_all()
 
 country1 = Country.create({ 
   name: "Japan",
@@ -17,6 +18,13 @@ country2 = Country.create({
   region: "Central America",
   mapURL: "",
   imageURL: "http://images.goaheadtours.com/banner/21292/downtown-havana-cuba-with-vintage-cars.jpg"
+})
+
+country3 = Country.create({ 
+  name: "Guatemala",
+  region: "Central America",
+  mapURL: "",
+  imageURL: "http://images.nationalgeographic.com/wpf/media-live/photos/000/177/cache/guatemala-pyramid_17779_600x450.jpg"
 })
 
 experience1 = Experience.create({
@@ -40,6 +48,14 @@ experience2 = Experience.create({
     imageURL: "http://www.finisterra.ca/wp-content/uploads/2016/08/Sambadrome-Parade-Rio-Carnaval.jpg"
     })
 
+  event2 = Event.create({
+    title: "Glastonbury Festival",
+    description: "UK's biggest music festival",
+    venue: "Worthy Farm, Somerset",
+    date: "June",
+    imageURL: "http://cdn.glastonburyfestivals.co.uk/wp-content/uploads/2016/09/81-Glastofest-AndrewAllcock-160625-1701.jpg"
+    })
+
 user1 = User.create({
   email: "claire@myemail.com",
   password: "password",
@@ -59,7 +75,15 @@ listCountry2 = BucketListCountry.create({
   user: user1,
   visitLength: 3,
   season: "spring",
-  archived: true
+  archived: false
+  })
+
+listCountry3 = BucketListCountry.create({
+  country: country3,
+  user: user1,
+  visitLength: 4,
+  season: "autumn",
+  archived: false
   })
 
 listExperience1 = BucketListExperience.create({
@@ -67,7 +91,17 @@ listExperience1 = BucketListExperience.create({
   user: user1
   })
 
+listExperience2 = BucketListExperience.create({
+  experience: experience2,
+  user: user1
+  })
+
 listEvent1 = BucketListEvent.create({
   event: event1,
+  user: user1
+  })
+
+listEvent2 = BucketListEvent.create({
+  event: event2,
   user: user1
   })

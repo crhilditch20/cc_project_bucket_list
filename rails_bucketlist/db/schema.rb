@@ -10,11 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170301092217) do
+ActiveRecord::Schema.define(version: 20170301135023) do
 
   create_table "archived_countries", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "country_id"
+    t.text     "best_memory"
+    t.string   "best_photo"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "archived_events", force: :cascade do |t|
+    t.integer  "country_id"
+    t.integer  "user_id"
+    t.text     "best_memory"
+    t.string   "best_photo"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "archived_experiences", force: :cascade do |t|
+    t.integer  "country_id"
+    t.integer  "user_id"
     t.text     "best_memory"
     t.string   "best_photo"
     t.datetime "created_at",  null: false

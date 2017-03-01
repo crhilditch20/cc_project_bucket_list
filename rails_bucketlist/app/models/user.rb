@@ -15,4 +15,10 @@ class User < ApplicationRecord
 
   has_many :archived_countries
   has_many :countries, through: :archived_countries, source: :country
+
+  has_many :archived_experiences
+  has_many :experiences, through: :archived_experiences, source: :experience
+
+  has_many :archived_events
+  has_many :events, through: :archived_events, source: :event
 end

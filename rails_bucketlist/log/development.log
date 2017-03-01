@@ -17217,3 +17217,417 @@ Processing by BucketlistsController#index as */*
 Completed 200 OK in 34ms (Views: 4.3ms | ActiveRecord: 1.7ms)
 
 
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/user/Desktop/cx3_8/project_4_bucket_list/bucketlist/rails_bucketlist/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/user/Desktop/cx3_8/project_4_bucket_list/bucketlist/rails_bucketlist/app/models/application_record.rb:1)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateArchivedExperiences (20170301135006)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "archived_experiences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "country_id" integer, "user_id" integer, "best_memory" text, "best_photo" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170301135006"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateArchivedEvents (20170301135023)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "archived_events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "country_id" integer, "user_id" integer, "best_memory" text, "best_photo" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170301135023"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/user/Desktop/cx3_8/project_4_bucket_list/bucketlist/rails_bucketlist/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/user/Desktop/cx3_8/project_4_bucket_list/bucketlist/rails_bucketlist/app/models/application_record.rb:1)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/user/Desktop/cx3_8/project_4_bucket_list/bucketlist/rails_bucketlist/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/user/Desktop/cx3_8/project_4_bucket_list/bucketlist/rails_bucketlist/app/models/application_record.rb:1)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "countries"[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "experiences"[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "events"[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "bucket_list_countries"[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "bucket_list_experiences"[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "bucket_list_events"[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "countries" ("name", "region", "mapURL", "imageURL", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Japan"], ["region", "Asia"], ["mapURL", ""], ["imageURL", "http://volcano.oregonstate.edu/sites/default/files/VWNews/2014-06-12-httpi.telegraph.co_.ukmultimediaarchive02551fuji_2551323b.jpg"], ["created_at", 2017-03-01 13:56:34 UTC], ["updated_at", 2017-03-01 13:56:34 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "countries" ("name", "region", "mapURL", "imageURL", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cuba"], ["region", "Central America"], ["mapURL", ""], ["imageURL", "http://images.goaheadtours.com/banner/21292/downtown-havana-cuba-with-vintage-cars.jpg"], ["created_at", 2017-03-01 13:56:34 UTC], ["updated_at", 2017-03-01 13:56:34 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "countries" ("name", "region", "mapURL", "imageURL", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Guatemala"], ["region", "Central America"], ["mapURL", ""], ["imageURL", "http://images.nationalgeographic.com/wpf/media-live/photos/000/177/cache/guatemala-pyramid_17779_600x450.jpg"], ["created_at", 2017-03-01 13:56:34 UTC], ["updated_at", 2017-03-01 13:56:34 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "experiences" ("title", "description", "season", "created_at", "updated_at", "imageURL") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Scuba diving"], ["description", "Swimming with the fishes"], ["season", "summer"], ["created_at", 2017-03-01 13:56:34 UTC], ["updated_at", 2017-03-01 13:56:34 UTC], ["imageURL", "http://www.seachallengers.com/wp-content/uploads/2016/05/scuba-diving.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "experiences" ("title", "description", "season", "created_at", "updated_at", "imageURL") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Kodo drumming"], ["description", "Watch a kodo drumming show"], ["season", "any"], ["created_at", 2017-03-01 13:56:34 UTC], ["updated_at", 2017-03-01 13:56:34 UTC], ["imageURL", "https://connectere.files.wordpress.com/2013/02/kodo-_credit_shinji_minami_.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "venue", "created_at", "updated_at", "date", "imageURL") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Rio Carnivale"], ["description", "World's biggest carnivale celebrations"], ["venue", "All over Rio"], ["created_at", 2017-03-01 13:56:34 UTC], ["updated_at", 2017-03-01 13:56:34 UTC], ["date", "February"], ["imageURL", "http://www.finisterra.ca/wp-content/uploads/2016/08/Sambadrome-Parade-Rio-Carnaval.jpg"]]
+  [1m[35m (14.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "venue", "created_at", "updated_at", "date", "imageURL") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Glastonbury Festival"], ["description", "UK's biggest music festival"], ["venue", "Worthy Farm, Somerset"], ["created_at", 2017-03-01 13:56:34 UTC], ["updated_at", 2017-03-01 13:56:34 UTC], ["date", "June"], ["imageURL", "http://cdn.glastonburyfestivals.co.uk/wp-content/uploads/2016/09/81-Glastofest-AndrewAllcock-160625-1701.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "claire@myemail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "claire@myemail.com"], ["encrypted_password", "$2a$11$EcK9s60pLnebNZHomRLZjOL/Ny30jPgdnGUYItme2QoxAsrxqDdpu"], ["created_at", 2017-03-01 13:56:35 UTC], ["updated_at", 2017-03-01 13:56:35 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bucket_list_countries" ("country_id", "user_id", "created_at", "updated_at", "visitLength", "season", "archived") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["country_id", 6], ["user_id", 4], ["created_at", 2017-03-01 13:56:35 UTC], ["updated_at", 2017-03-01 13:56:35 UTC], ["visitLength", 2], ["season", "autumn"], ["archived", false]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bucket_list_countries" ("country_id", "user_id", "created_at", "updated_at", "visitLength", "season", "archived") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["country_id", 7], ["user_id", 4], ["created_at", 2017-03-01 13:56:35 UTC], ["updated_at", 2017-03-01 13:56:35 UTC], ["visitLength", 3], ["season", "spring"], ["archived", false]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bucket_list_countries" ("country_id", "user_id", "created_at", "updated_at", "visitLength", "season", "archived") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["country_id", 8], ["user_id", 4], ["created_at", 2017-03-01 13:56:35 UTC], ["updated_at", 2017-03-01 13:56:35 UTC], ["visitLength", 4], ["season", "autumn"], ["archived", false]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bucket_list_experiences" ("experience_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["experience_id", 5], ["user_id", 4], ["created_at", 2017-03-01 13:56:35 UTC], ["updated_at", 2017-03-01 13:56:35 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bucket_list_experiences" ("experience_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["experience_id", 6], ["user_id", 4], ["created_at", 2017-03-01 13:56:35 UTC], ["updated_at", 2017-03-01 13:56:35 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bucket_list_events" ("event_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_id", 3], ["user_id", 4], ["created_at", 2017-03-01 13:56:35 UTC], ["updated_at", 2017-03-01 13:56:35 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bucket_list_events" ("event_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_id", 4], ["user_id", 4], ["created_at", 2017-03-01 13:56:35 UTC], ["updated_at", 2017-03-01 13:56:35 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/user/Desktop/cx3_8/project_4_bucket_list/bucketlist/rails_bucketlist/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/user/Desktop/cx3_8/project_4_bucket_list/bucketlist/rails_bucketlist/app/models/application_record.rb:1)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[31mDELETE FROM "countries"[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "experiences"[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "events"[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "bucket_list_countries"[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "bucket_list_experiences"[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "bucket_list_events"[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "archived_countries"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "region", "mapURL", "imageURL", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Japan"], ["region", "Asia"], ["mapURL", ""], ["imageURL", "http://volcano.oregonstate.edu/sites/default/files/VWNews/2014-06-12-httpi.telegraph.co_.ukmultimediaarchive02551fuji_2551323b.jpg"], ["created_at", 2017-03-01 13:56:56 UTC], ["updated_at", 2017-03-01 13:56:56 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "countries" ("name", "region", "mapURL", "imageURL", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cuba"], ["region", "Central America"], ["mapURL", ""], ["imageURL", "http://images.goaheadtours.com/banner/21292/downtown-havana-cuba-with-vintage-cars.jpg"], ["created_at", 2017-03-01 13:56:56 UTC], ["updated_at", 2017-03-01 13:56:56 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "countries" ("name", "region", "mapURL", "imageURL", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Guatemala"], ["region", "Central America"], ["mapURL", ""], ["imageURL", "http://images.nationalgeographic.com/wpf/media-live/photos/000/177/cache/guatemala-pyramid_17779_600x450.jpg"], ["created_at", 2017-03-01 13:56:56 UTC], ["updated_at", 2017-03-01 13:56:56 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "experiences" ("title", "description", "season", "created_at", "updated_at", "imageURL") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Scuba diving"], ["description", "Swimming with the fishes"], ["season", "summer"], ["created_at", 2017-03-01 13:56:56 UTC], ["updated_at", 2017-03-01 13:56:56 UTC], ["imageURL", "http://www.seachallengers.com/wp-content/uploads/2016/05/scuba-diving.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "experiences" ("title", "description", "season", "created_at", "updated_at", "imageURL") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Kodo drumming"], ["description", "Watch a kodo drumming show"], ["season", "any"], ["created_at", 2017-03-01 13:56:56 UTC], ["updated_at", 2017-03-01 13:56:56 UTC], ["imageURL", "https://connectere.files.wordpress.com/2013/02/kodo-_credit_shinji_minami_.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "venue", "created_at", "updated_at", "date", "imageURL") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Rio Carnivale"], ["description", "World's biggest carnivale celebrations"], ["venue", "All over Rio"], ["created_at", 2017-03-01 13:56:56 UTC], ["updated_at", 2017-03-01 13:56:56 UTC], ["date", "February"], ["imageURL", "http://www.finisterra.ca/wp-content/uploads/2016/08/Sambadrome-Parade-Rio-Carnaval.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "venue", "created_at", "updated_at", "date", "imageURL") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Glastonbury Festival"], ["description", "UK's biggest music festival"], ["venue", "Worthy Farm, Somerset"], ["created_at", 2017-03-01 13:56:56 UTC], ["updated_at", 2017-03-01 13:56:56 UTC], ["date", "June"], ["imageURL", "http://cdn.glastonburyfestivals.co.uk/wp-content/uploads/2016/09/81-Glastofest-AndrewAllcock-160625-1701.jpg"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "claire@myemail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "claire@myemail.com"], ["encrypted_password", "$2a$11$Y2jQfe/O9fC1eyGekrEhgeMau6.g1p0YbKUwBQ6Qk6kGZHmhP5fVi"], ["created_at", 2017-03-01 13:56:56 UTC], ["updated_at", 2017-03-01 13:56:56 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bucket_list_countries" ("country_id", "user_id", "created_at", "updated_at", "visitLength", "season", "archived") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["country_id", 9], ["user_id", 5], ["created_at", 2017-03-01 13:56:56 UTC], ["updated_at", 2017-03-01 13:56:56 UTC], ["visitLength", 2], ["season", "autumn"], ["archived", false]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "bucket_list_countries" ("country_id", "user_id", "created_at", "updated_at", "visitLength", "season", "archived") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["country_id", 10], ["user_id", 5], ["created_at", 2017-03-01 13:56:56 UTC], ["updated_at", 2017-03-01 13:56:56 UTC], ["visitLength", 3], ["season", "spring"], ["archived", false]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bucket_list_countries" ("country_id", "user_id", "created_at", "updated_at", "visitLength", "season", "archived") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["country_id", 11], ["user_id", 5], ["created_at", 2017-03-01 13:56:56 UTC], ["updated_at", 2017-03-01 13:56:56 UTC], ["visitLength", 4], ["season", "autumn"], ["archived", false]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bucket_list_experiences" ("experience_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["experience_id", 7], ["user_id", 5], ["created_at", 2017-03-01 13:56:56 UTC], ["updated_at", 2017-03-01 13:56:56 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bucket_list_experiences" ("experience_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["experience_id", 8], ["user_id", 5], ["created_at", 2017-03-01 13:56:56 UTC], ["updated_at", 2017-03-01 13:56:56 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bucket_list_events" ("event_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_id", 5], ["user_id", 5], ["created_at", 2017-03-01 13:56:56 UTC], ["updated_at", 2017-03-01 13:56:56 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bucket_list_events" ("event_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_id", 6], ["user_id", 5], ["created_at", 2017-03-01 13:56:56 UTC], ["updated_at", 2017-03-01 13:56:56 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/user/Desktop/cx3_8/project_4_bucket_list/bucketlist/rails_bucketlist/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/user/Desktop/cx3_8/project_4_bucket_list/bucketlist/rails_bucketlist/app/models/application_record.rb:1)
+Started GET "/bucketlists" for ::1 at 2017-03-01 13:57:12 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: skip_before_filter is deprecated and will be removed in Rails 5.1. Use skip_before_action instead. (called from <class:ApplicationController> at /Users/user/Desktop/cx3_8/project_4_bucket_list/bucketlist/rails_bucketlist/app/controllers/application_controller.rb:3)
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 401 Unauthorized in 24ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/users.json" for ::1 at 2017-03-01 13:57:16 +0000
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2017-03-01 13:57:24 +0000
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"claire@myemail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"claire@myemail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "claire@myemail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-03-01 13:57:24 UTC], ["last_sign_in_at", 2017-03-01 13:57:24 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", 2017-03-01 13:57:24 UTC], ["id", 5]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 158ms (Views: 0.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-03-01 13:57:25 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.3ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.2ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[36mExperience Load (0.2ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.2ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 113ms (Views: 1.3ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/countries/11" for ::1 at 2017-03-01 13:57:33 +0000
+Processing by CountriesController#show as */*
+  Parameters: {"id"=>"11", "country"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.1ms)[0m  [1m[34mSELECT  "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-03-01 13:57:55 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.3ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[36mCountry Load (2.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[36mExperience Load (0.3ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.2ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 36ms (Views: 1.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/countries/11" for ::1 at 2017-03-01 13:57:58 +0000
+Processing by CountriesController#show as */*
+  Parameters: {"id"=>"11", "country"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.1ms)[0m  [1m[34mSELECT  "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/archivedcountries" for ::1 at 2017-03-01 13:59:36 +0000
+Processing by ArchivedcountriesController#create as */*
+  Parameters: {"archivedcountry"=>{"country_id"=>"11", "best_memory"=>"Hiking up a volcano at sunrise", "best_photo"=>"https://altiplanos.com.gt/images/hikes/09_tajamulcotwoday.jpg"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "archived_countries" ("user_id", "country_id", "best_memory", "best_photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 5], ["country_id", 11], ["best_memory", "Hiking up a volcano at sunrise"], ["best_photo", "https://altiplanos.com.gt/images/hikes/09_tajamulcotwoday.jpg"], ["created_at", 2017-03-01 13:59:36 UTC], ["updated_at", 2017-03-01 13:59:36 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 21ms (Views: 0.3ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/archivedcountries" for ::1 at 2017-03-01 14:00:34 +0000
+Processing by ArchivedcountriesController#create as */*
+  Parameters: {"archivedcountry"=>{"country_id"=>"11", "best_memory"=>"blah", "best_photo"=>"blah"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "archived_countries" ("user_id", "country_id", "best_memory", "best_photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 5], ["country_id", 11], ["best_memory", "blah"], ["best_photo", "blah"], ["created_at", 2017-03-01 14:00:34 UTC], ["updated_at", 2017-03-01 14:00:34 UTC]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-03-01 14:00:35 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 29ms (Views: 1.3ms | ActiveRecord: 1.9ms)
+
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/user/Desktop/cx3_8/project_4_bucket_list/bucketlist/rails_bucketlist/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/user/Desktop/cx3_8/project_4_bucket_list/bucketlist/rails_bucketlist/app/models/application_record.rb:1)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[31mDELETE FROM "countries"[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "experiences"[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "events"[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "bucket_list_countries"[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "bucket_list_experiences"[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "bucket_list_events"[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "archived_countries"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "countries" ("name", "region", "mapURL", "imageURL", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Japan"], ["region", "Asia"], ["mapURL", ""], ["imageURL", "http://volcano.oregonstate.edu/sites/default/files/VWNews/2014-06-12-httpi.telegraph.co_.ukmultimediaarchive02551fuji_2551323b.jpg"], ["created_at", 2017-03-01 14:00:52 UTC], ["updated_at", 2017-03-01 14:00:52 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "countries" ("name", "region", "mapURL", "imageURL", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cuba"], ["region", "Central America"], ["mapURL", ""], ["imageURL", "http://images.goaheadtours.com/banner/21292/downtown-havana-cuba-with-vintage-cars.jpg"], ["created_at", 2017-03-01 14:00:52 UTC], ["updated_at", 2017-03-01 14:00:52 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "countries" ("name", "region", "mapURL", "imageURL", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Guatemala"], ["region", "Central America"], ["mapURL", ""], ["imageURL", "http://images.nationalgeographic.com/wpf/media-live/photos/000/177/cache/guatemala-pyramid_17779_600x450.jpg"], ["created_at", 2017-03-01 14:00:52 UTC], ["updated_at", 2017-03-01 14:00:52 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "experiences" ("title", "description", "season", "created_at", "updated_at", "imageURL") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Scuba diving"], ["description", "Swimming with the fishes"], ["season", "summer"], ["created_at", 2017-03-01 14:00:52 UTC], ["updated_at", 2017-03-01 14:00:52 UTC], ["imageURL", "http://www.seachallengers.com/wp-content/uploads/2016/05/scuba-diving.jpg"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "experiences" ("title", "description", "season", "created_at", "updated_at", "imageURL") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Kodo drumming"], ["description", "Watch a kodo drumming show"], ["season", "any"], ["created_at", 2017-03-01 14:00:52 UTC], ["updated_at", 2017-03-01 14:00:52 UTC], ["imageURL", "https://connectere.files.wordpress.com/2013/02/kodo-_credit_shinji_minami_.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "venue", "created_at", "updated_at", "date", "imageURL") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Rio Carnivale"], ["description", "World's biggest carnivale celebrations"], ["venue", "All over Rio"], ["created_at", 2017-03-01 14:00:52 UTC], ["updated_at", 2017-03-01 14:00:52 UTC], ["date", "February"], ["imageURL", "http://www.finisterra.ca/wp-content/uploads/2016/08/Sambadrome-Parade-Rio-Carnaval.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "venue", "created_at", "updated_at", "date", "imageURL") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Glastonbury Festival"], ["description", "UK's biggest music festival"], ["venue", "Worthy Farm, Somerset"], ["created_at", 2017-03-01 14:00:52 UTC], ["updated_at", 2017-03-01 14:00:52 UTC], ["date", "June"], ["imageURL", "http://cdn.glastonburyfestivals.co.uk/wp-content/uploads/2016/09/81-Glastofest-AndrewAllcock-160625-1701.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "claire@myemail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "claire@myemail.com"], ["encrypted_password", "$2a$11$ue0XVmBe4wDSeq9Zkw6M.ONoaDWhA284K9b8wjWF7IHbj1cxVY3ju"], ["created_at", 2017-03-01 14:00:52 UTC], ["updated_at", 2017-03-01 14:00:52 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bucket_list_countries" ("country_id", "user_id", "created_at", "updated_at", "visitLength", "season", "archived") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["country_id", 12], ["user_id", 6], ["created_at", 2017-03-01 14:00:52 UTC], ["updated_at", 2017-03-01 14:00:52 UTC], ["visitLength", 2], ["season", "autumn"], ["archived", false]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bucket_list_countries" ("country_id", "user_id", "created_at", "updated_at", "visitLength", "season", "archived") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["country_id", 13], ["user_id", 6], ["created_at", 2017-03-01 14:00:52 UTC], ["updated_at", 2017-03-01 14:00:52 UTC], ["visitLength", 3], ["season", "spring"], ["archived", false]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bucket_list_countries" ("country_id", "user_id", "created_at", "updated_at", "visitLength", "season", "archived") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["country_id", 14], ["user_id", 6], ["created_at", 2017-03-01 14:00:52 UTC], ["updated_at", 2017-03-01 14:00:52 UTC], ["visitLength", 4], ["season", "autumn"], ["archived", false]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bucket_list_experiences" ("experience_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["experience_id", 9], ["user_id", 6], ["created_at", 2017-03-01 14:00:52 UTC], ["updated_at", 2017-03-01 14:00:52 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bucket_list_experiences" ("experience_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["experience_id", 10], ["user_id", 6], ["created_at", 2017-03-01 14:00:52 UTC], ["updated_at", 2017-03-01 14:00:52 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bucket_list_events" ("event_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_id", 7], ["user_id", 6], ["created_at", 2017-03-01 14:00:52 UTC], ["updated_at", 2017-03-01 14:00:52 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bucket_list_events" ("event_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_id", 8], ["user_id", 6], ["created_at", 2017-03-01 14:00:52 UTC], ["updated_at", 2017-03-01 14:00:52 UTC]]
+  [1m[35m (17.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/bucketlists" for ::1 at 2017-03-01 14:01:23 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users.json" for ::1 at 2017-03-01 14:01:29 +0000
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2017-03-01 14:01:44 +0000
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"claire@myemail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"claire@myemail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "claire@myemail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-03-01 14:01:44 UTC], ["last_sign_in_at", 2017-03-01 14:01:44 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", 2017-03-01 14:01:44 UTC], ["id", 6]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 138ms (Views: 0.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-03-01 14:01:45 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.2ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.2ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 1.3ms | ActiveRecord: 1.5ms)
+
+
