@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170228094831) do
+ActiveRecord::Schema.define(version: 20170301092217) do
+
+  create_table "archived_countries", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "country_id"
+    t.text     "best_memory"
+    t.string   "best_photo"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "bucket_list_countries", force: :cascade do |t|
     t.integer  "country_id"
@@ -19,6 +28,7 @@ ActiveRecord::Schema.define(version: 20170228094831) do
     t.datetime "updated_at",  null: false
     t.integer  "visitLength"
     t.string   "season"
+    t.boolean  "archived"
   end
 
   create_table "bucket_list_events", force: :cascade do |t|

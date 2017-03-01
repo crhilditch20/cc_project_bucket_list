@@ -49,15 +49,15 @@ class CountriesController < ApplicationController
   #     end
   # end
 
-#do I need to also delete the BucketListCountry?
-  def destroy
-    country = getCountryObject(params[:id])
-      if country.destroy!
-        render({json: {status: :success}})
-      else
-        render({json: {status: :delete_failed}})
-      end
-  end
+# #do I need to also delete the BucketListCountry?
+#   def destroy
+#     country = getCountryObject(params[:id])
+#       if country.destroy!
+#         render({json: {status: :success}})
+#       else
+#         render({json: {status: :delete_failed}})
+#       end
+#   end
 
   private
   def country_params

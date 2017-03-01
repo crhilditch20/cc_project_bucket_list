@@ -95,6 +95,7 @@ class BucketList extends React.Component {
     }
 
     loadIndividualEvent (eventID) {
+      console.log('this');
       var url = 'http://localhost:5000/events/' + eventID;
       var request = new XMLHttpRequest()
       request.open('GET', url)
@@ -105,6 +106,8 @@ class BucketList extends React.Component {
       request.onload = () => {
          if(request.status === 200){
           var data = JSON.parse(request.responseText)
+          console.log('hello')
+          console.log(data)
           this.setState({selectedItem: data})
           this.setState({selectedItemType: "event"})
          } else{
@@ -114,9 +117,10 @@ class BucketList extends React.Component {
       request.send(null)
     }
 
-    // pageRefresh () {
-    //   this.setState({selectedItem: null});
-    // }
+    pageRefresh () {
+      this.setState({selectedItem: null});
+      this.setState({selectedItemType: null});
+    }
 
 
   render () {
@@ -136,7 +140,7 @@ class BucketList extends React.Component {
     if (this.state.selectedItem){
       mainDiv = 
       <div className="individual-item">
-        <IndividualItem item={this.state.selectedItem} category={this.state.selectedItemType} reload={this.loadIndividualCountry.bind(this)} />
+        <IndividualItem item={this.state.selectedItem} category={this.state.selectedItemType} reload={this.loadIndividualCountry.bind(this)} pageRefresh={this.pageRefresh.bind(this)}/>
       </div>
     }
 
@@ -147,6 +151,6 @@ class BucketList extends React.Component {
       );
     }
 }
-//pageRefresh={this.pageRefresh.bind(this)}
+
 
 export default BucketList

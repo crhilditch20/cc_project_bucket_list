@@ -50,14 +50,16 @@ listCountry1 = BucketListCountry.create({
   country: country1,
   user: user1,
   visitLength: 2,
-  season: "autumn"
+  season: "autumn",
+  archived: false
   })
 
 listCountry2 = BucketListCountry.create({
   country: country2,
   user: user1,
   visitLength: 3,
-  season: "spring"
+  season: "spring",
+  archived: true
   })
 
 listExperience1 = BucketListExperience.create({

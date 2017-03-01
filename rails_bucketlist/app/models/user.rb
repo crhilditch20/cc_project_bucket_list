@@ -13,4 +13,6 @@ class User < ApplicationRecord
   has_many :bucket_list_events
   has_many :events, through: :bucket_list_events, source: :event
 
+  has_many :archived_countries
+  has_many :countries, through: :archived_countries, source: :country
 end
