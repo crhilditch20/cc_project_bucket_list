@@ -4,7 +4,7 @@ class ArchivedcountriesController < ApplicationController
 
   def create
     archiveCountryData = archive_country_params()
-    archiveCountry = ArchiveCountry.create({
+    archiveCountry = ArchivedCountry.create({
       country_id: archiveCountryData["country_id"],
       user: current_user,
       best_memory: archiveCountryData["best_memory"],
@@ -16,7 +16,7 @@ class ArchivedcountriesController < ApplicationController
 
   private
   def archive_country_params
-    params.require(:country).permit([:country_id, :best_memory, :best_photo])
+    params.require(:archivedcountry).permit([:country_id, :best_memory, :best_photo])
   end
 
 end

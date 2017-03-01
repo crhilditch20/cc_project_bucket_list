@@ -16329,3 +16329,107 @@ Processing by CountriesController#show as */*
 Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.5ms)
 
 
+Started POST "/archivedcountries" for ::1 at 2017-03-01 10:18:23 +0000
+Processing by ArchivedcountriesController#create as */*
+  Parameters: {"archivedcountry"=>{"country_id"=>nil, "best_memory"=>"I don't remember", "best_photo"=>""}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: country):
+  
+app/controllers/archivedcountries_controller.rb:19:in `archive_country_params'
+app/controllers/archivedcountries_controller.rb:6:in `create'
+  Rendering /Users/user/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/user/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/user/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /Users/user/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/user/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/user/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/user/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/user/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.0ms)
+  [1m[36mCountry Load (1.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+Started POST "/archivedcountries" for ::1 at 2017-03-01 10:20:09 +0000
+Processing by ArchivedcountriesController#create as */*
+  Parameters: {"archivedcountry"=>{"country_id"=>5, "best_memory"=>"I don't remember", "best_photo"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: country):
+  
+app/controllers/archivedcountries_controller.rb:19:in `archive_country_params'
+app/controllers/archivedcountries_controller.rb:6:in `create'
+  Rendering /Users/user/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/user/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/user/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/user/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/user/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/user/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/user/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/user/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.1ms)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/user/Desktop/cx3_8/project_4_bucket_list/bucketlist/rails_bucketlist/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/user/Desktop/cx3_8/project_4_bucket_list/bucketlist/rails_bucketlist/app/models/application_record.rb:1)
+Started POST "/archivedcountries" for ::1 at 2017-03-01 10:21:30 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: skip_before_filter is deprecated and will be removed in Rails 5.1. Use skip_before_action instead. (called from <class:ApplicationController> at /Users/user/Desktop/cx3_8/project_4_bucket_list/bucketlist/rails_bucketlist/app/controllers/application_controller.rb:3)
+Processing by ArchivedcountriesController#create as */*
+  Parameters: {"archivedcountry"=>{"country_id"=>5, "best_memory"=>"Blah", "best_photo"=>"Blah"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.6ms)
+
+
+  
+NameError (uninitialized constant ArchivedcountriesController::ArchiveCountry):
+  
+app/controllers/archivedcountries_controller.rb:7:in `create'
+  Rendering /Users/user/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/user/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/user/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/user/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/user/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/user/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/user/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/user/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.9ms)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/user/Desktop/cx3_8/project_4_bucket_list/bucketlist/rails_bucketlist/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/user/Desktop/cx3_8/project_4_bucket_list/bucketlist/rails_bucketlist/app/models/application_record.rb:1)
+Started POST "/archivedcountries" for ::1 at 2017-03-01 10:22:29 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: skip_before_filter is deprecated and will be removed in Rails 5.1. Use skip_before_action instead. (called from <class:ApplicationController> at /Users/user/Desktop/cx3_8/project_4_bucket_list/bucketlist/rails_bucketlist/app/controllers/application_controller.rb:3)
+Processing by ArchivedcountriesController#create as */*
+  Parameters: {"archivedcountry"=>{"country_id"=>5, "best_memory"=>"blah", "best_photo"=>"blah"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "archived_countries" ("user_id", "country_id", "best_memory", "best_photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 3], ["country_id", 5], ["best_memory", "blah"], ["best_photo", "blah"], ["created_at", 2017-03-01 10:22:29 UTC], ["updated_at", 2017-03-01 10:22:29 UTC]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 73ms (Views: 0.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/bucketlists" for ::1 at 2017-03-01 10:22:33 +0000
+Processing by BucketlistsController#index as */*
+  Parameters: {"bucketlist"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBucketListCountry Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_countries".* FROM "bucket_list_countries" WHERE "bucket_list_countries"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mBucketListExperience Load (0.2ms)[0m  [1m[34mSELECT "bucket_list_experiences".* FROM "bucket_list_experiences" WHERE "bucket_list_experiences"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[36mExperience Load (0.1ms)[0m  [1m[34mSELECT  "experiences".* FROM "experiences" WHERE "experiences"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBucketListEvent Load (0.1ms)[0m  [1m[34mSELECT "bucket_list_events".* FROM "bucket_list_events" WHERE "bucket_list_events"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 1.6ms | ActiveRecord: 3.2ms)
+
+
+  [1m[36mArchivedCountry Load (1.3ms)[0m  [1m[34mSELECT "archived_countries".* FROM "archived_countries"[0m
