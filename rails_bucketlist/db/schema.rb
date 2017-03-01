@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20170301135023) do
   end
 
   create_table "archived_events", force: :cascade do |t|
-    t.integer  "country_id"
+    t.integer  "event_id"
     t.integer  "user_id"
     t.text     "best_memory"
     t.string   "best_photo"
@@ -31,12 +31,12 @@ ActiveRecord::Schema.define(version: 20170301135023) do
   end
 
   create_table "archived_experiences", force: :cascade do |t|
-    t.integer  "country_id"
+    t.integer  "experience_id"
     t.integer  "user_id"
     t.text     "best_memory"
     t.string   "best_photo"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "bucket_list_countries", force: :cascade do |t|
