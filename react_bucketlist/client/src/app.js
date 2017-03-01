@@ -6,6 +6,7 @@ import BucketList from './components/BucketList'
 import AddCountry from './components/AddCountry'
 import AddExperience from './components/AddExperience'
 import AddEvent from './components/AddEvent'
+import ArchiveCountry from './components/ArchiveCountry'
 
 import {Router, Route, IndexRoute, hashHistory} from 'react-router'
 
@@ -20,6 +21,7 @@ class App extends React.Component{
           <Route path='/countries' component={AddCountry} />
           <Route path='/experiences' component={AddExperience} />
           <Route path='/events' component={AddEvent} />
+          <Route path='/archivedcountries' component={ArchiveCountry} />
           
         </Route>
       </Router>

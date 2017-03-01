@@ -62,7 +62,7 @@ class IndividualItem extends React.Component {
       <div className='info-container'>
         {info}
          <input type='checkbox' id='done-it'></input>
-         <button>Been there, done that!</button>
+         <Link className='link-button' to='/archivedcountries'>Been there, done that!</Link>
       </div>
       <img id='itempage-pic' src={this.props.item.country.imageURL}></img>
       <EditCountry item={this.props.item} reload={this.props.reload}/>
@@ -73,7 +73,7 @@ class IndividualItem extends React.Component {
       <div className='info-container'>
         {info}
          <input type='checkbox' id='done-it'></input>
-         <button>Been there, done that!</button>
+         <Link className='link-button' to='/archivedcountries'>Been there, done that!</Link>
       </div>
       <img id='itempage-pic' src={this.props.item.imageURL}></img>
       </div>
